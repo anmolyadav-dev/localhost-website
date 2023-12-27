@@ -2,11 +2,8 @@
 import { useParams } from "next/navigation";
 import { useState } from "react";
 
-interface AssignmentSubmitPageProps {
-  assignmentId: string;
-}
 
-const AssignmentSubmitPage: React.FC<AssignmentSubmitPageProps> = () => {
+const Page = () => {
   const { assignmentId } = useParams();
   const [githubLink, setGithubLink] = useState("");
 
@@ -14,9 +11,7 @@ const AssignmentSubmitPage: React.FC<AssignmentSubmitPageProps> = () => {
     try {
       // Implement submission logic (e.g., API call, database interaction)
       // await submitAssignment(assignmentId, githubLink); // Replace with your submission logic
-
       // Redirect to success page
-    
     } catch (error) {
       // Display user-friendly error message
       alert(
@@ -62,4 +57,4 @@ const AssignmentSubmitPage: React.FC<AssignmentSubmitPageProps> = () => {
   );
 };
 
-export default AssignmentSubmitPage;
+export default Page;
