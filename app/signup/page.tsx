@@ -14,7 +14,7 @@ const signupSchema = Yup.object().shape({
     .required("Password is required")
     .min(8, "Password must be at least 8 characters"),
   confirmPassword: Yup.string()
-    .oneOf([Yup.ref("password"), null], "Passwords must match")
+    .oneOf([Yup.ref("password")], "Passwords must match")
     .required("Confirm Password is required"),
 });
 
@@ -23,7 +23,7 @@ const SignupPage = () => {
   const router = useRouter();
 
   // Handle signup form submission
-  const handleSignup = async (values, { setSubmitting }) => {
+  const handleSignup = async (values: any) => {
     try {
       const response = await axios.post("api/users/signup", values);
       console.log(response.data);
@@ -32,11 +32,11 @@ const SignupPage = () => {
       router.push("/login");
 
       console.log("Signup Successful!", values);
-      setSubmitting(false);
+      // setSubmitting(false);
     } catch (error) {
       // Handle error (e.g., display an error message)
       console.error("Signup error:", error);
-      setSubmitting(false);
+      // setSubmitting(false);
     }
   };
 

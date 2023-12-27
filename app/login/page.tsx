@@ -16,7 +16,7 @@ const LoginPage = () => {
   const router = useRouter();
 
   // Handle form submission
-  const handleLogin = async (values:JSON, { setSubmitting }) => {
+  const handleLogin = async (values: any) => {
       try {
         const response = await axios.post('api/users/login', values);
         // console.log(response);
@@ -28,7 +28,7 @@ const LoginPage = () => {
       }
 
     // console.log("Login Successful!", values);
-    setSubmitting(false);
+    // setSubmitting(false);
   };
 
   return (

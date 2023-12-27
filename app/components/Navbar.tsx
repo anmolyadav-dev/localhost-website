@@ -12,7 +12,7 @@ const Navbar = () => {
     try {
       const res = await axios.get("/api/me");
       console.log(res.data);
-      setUser(res.data.data);
+      setUser(res.data.data.username);
     } catch (error) {
       console.error("Error fetching user details:", error);
     }
@@ -46,7 +46,7 @@ const Navbar = () => {
           {user ? (
             <Link href="/profile">
               <li className="hover:text-[#4DFFDB] cursor-pointer">
-                {user.username}
+                {user}
               </li>
             </Link>
           ) : (
