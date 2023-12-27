@@ -1,13 +1,18 @@
-// AssignmentCard.tsx
-
 import Link from "next/link";
+
+interface AssignmentCardProps {
+  assignmentTitle: string;
+  assignmentDescription: string;
+  dueDate: string;
+  assignmentId: string;
+}
 
 const AssignmentCard = ({
   assignmentTitle,
   assignmentDescription,
   dueDate,
   assignmentId,
-}) => {
+}: AssignmentCardProps) => {
   return (
     <div className="bg-white shadow-lg rounded-md overflow-hidden">
       <div className="p-4">

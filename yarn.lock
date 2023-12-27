@@ -184,6 +184,13 @@
   dependencies:
     "@types/node" "*"
 
+"@types/next@^9.0.0":
+  "integrity" "sha512-gnBXM8rP1mnCgT1uE2z8SnpFTKRWReJlhbZLZkOLq/CH1ifvTNwjIVtXvsywTy1dwVklf+y/MB0Eh6FOa94yrg=="
+  "resolved" "https://registry.npmjs.org/@types/next/-/next-9.0.0.tgz"
+  "version" "9.0.0"
+  dependencies:
+    "next" "*"
+
 "@types/node@*", "@types/node@^20":
   "integrity" "sha512-D08YG6rr8X90YB56tSIuBaddy/UXAA9RKJoFvrsnogAum/0pmjkgi4+2nx96A330FmioegBWmEYQ+syqCFaveg=="
   "resolved" "https://registry.npmjs.org/@types/node/-/node-20.10.4.tgz"
@@ -1926,7 +1933,7 @@
   "resolved" "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   "version" "1.4.0"
 
-"next@14.0.4":
+"next@*", "next@14.0.4":
   "integrity" "sha512-qbwypnM7327SadwFtxXnQdGiKpkuhaRLE2uq62/nRul9cj9KhQ5LhHmlziTNqUidZotw/Q1I9OjirBROdUJNgA=="
   "resolved" "https://registry.npmjs.org/next/-/next-14.0.4.tgz"
   "version" "14.0.4"
