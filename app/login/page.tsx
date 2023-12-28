@@ -33,7 +33,7 @@ const LoginPage = () => {
 
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
-      <div className="flex flex-col">
+      <div className="flex flex-col px-3">
         <div className="flex items-center justify-center h-screen">
           <Formik
             initialValues={{ email: "", password: "" }}

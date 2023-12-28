@@ -1,7 +1,7 @@
 const page = () => {
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
-      <h2 className="font-[mine] text-6xl text-white pt-32 pb-10 px-10">
+      <h2 className="font-[mine] text-4xl lg:text-6xl text-white pt-32 pb-5 lg:pb-10 px-10">
         <span className="text-[#4DFFDB]">ABOUT</span> LOCALHOST
       </h2>
 

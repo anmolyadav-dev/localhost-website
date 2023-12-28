@@ -27,11 +27,11 @@ const Page = () => {
         <h2 className="font-[mine] text-4xl text-white mb-6 pt-32">
           Submit Assignment #{assignmentId}
         </h2>
-        <div className="max-w-md mx-auto bg-white p-6 rounded-md shadow-md">
+        <div className="max-w-md mx-auto bg-white bg-opacity-10 p-6 rounded-md shadow-md">
           {/* GitHub Link Submission Form */}
           <label
             htmlFor="githublink"
-            className="block text-sm font-medium text-gray-700 mb-2"
+            className="block text-sm font-medium text-white mb-2"
           >
             Your GitHub Link:
           </label>

@@ -14,11 +14,13 @@ const AssignmentCard = ({
   assignmentId,
 }: AssignmentCardProps) => {
   return (
-    <div className="bg-white shadow-lg rounded-md overflow-hidden">
+    <div className="bg-white bg-opacity-10 shadow-lg rounded-md overflow-hidden">
       <div className="p-4">
-        <h2 className="text-xl font-semibold mb-2">{assignmentTitle}</h2>
-        <p className="text-gray-600 mb-4">{assignmentDescription}</p>
-        <p className="text-gray-500">Due Date: {dueDate}</p>
+        <h2 className="text-xl text-white font-semibold mb-2">
+          {assignmentTitle}
+        </h2>
+        <p className="text-white mb-4">{assignmentDescription}</p>
+        <p className="text-white">Due Date: {dueDate}</p>
         <Link
           href={`/assignments/${assignmentId}`}
           className="text-blue-500 hover:underline"
