@@ -8,6 +8,7 @@ const Page = () => {
   const handleLogout = async () => {
     try {
       await axios.get('api/users/logout')
+      
     } catch (error: any) {
       console.log(error.message)
     }

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
 
 export async function GET() {
     try {
@@ -7,9 +8,7 @@ export async function GET() {
             success: true
         })
 
-        response.cookies.set("token", "", {
-            httpOnly: true,
-        });
+        cookies().delete("token");
 
         return response
         
