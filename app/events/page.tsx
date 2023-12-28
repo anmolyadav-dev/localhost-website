@@ -4,24 +4,33 @@ import EventCard from "../components/EventCard";
 // Your events data
 const eventsData = [
   {
-    eventName: "Next.js Meetup",
-    eventDate: "December 15, 2023",
-    eventLocation: "Virtual Event",
-    imageUrl: "/images/nextjs-meetup.jpg",
+    eventId: "1",
+    eventName: "Tech Conference 2023",
+    eventDate: "2023-12-29",
+    eventLocation: "Virtual",
+    imageUrl: "/images/tech_conference.jpg",
   },
   {
-    eventName: "Next.js Meetup",
-    eventDate: "December 15, 2023",
-    eventLocation: "Virtual Event",
-    imageUrl: "/images/nextjs-meetup.jpg",
+    eventId: "2",
+    eventName: "Webinar on AI in Healthcare",
+    eventDate: "2023-04-15",
+    eventLocation: "Online",
+    imageUrl: "/images/ai_webinar.jpg",
   },
   {
-    eventName: "Next.js Meetup",
-    eventDate: "December 15, 2023",
-    eventLocation: "Virtual Event",
-    imageUrl: "/images/nextjs-meetup.jpg",
+    eventId: "3",
+    eventName: "Hackathon: Code for a Cause",
+    eventDate: "2023-06-10",
+    eventLocation: "In-person",
+    imageUrl: "/images/hackathon.jpg",
   },
-
+  {
+    eventId: "4",
+    eventName: "Hackathon: Code for a Cause",
+    eventDate: "2023-06-10",
+    eventLocation: "In-person",
+    imageUrl: "/images/hackathon.jpg",
+  },
 ];
 
 const Page = () => {
@@ -31,16 +40,9 @@ const Page = () => {
         E<span className="text-[#4DFFDB]">V</span>ENTS
       </h2>
 
-      <div className="grid justify-center items-center px-10 py-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {eventsData.map((event, index) => (
-          <EventCard
-            key={index} // Using the index as the key
-            eventId={index.toString()} // Using the index as the eventId
-            eventName={event.eventName}
-            eventDate={event.eventDate}
-            eventLocation={event.eventLocation}
-            imageUrl={event.imageUrl}
-          />
+      <div className="flex flex-wrap justify-center items-center gap-4 p-8">
+        {eventsData.map((event) => (
+          <EventCard key={event.eventId} {...event} />
         ))}
       </div>
     </div>
