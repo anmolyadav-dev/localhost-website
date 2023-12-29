@@ -1,4 +1,3 @@
-// Import necessary libraries
 "use client"
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -8,21 +7,24 @@ const ProfilePage = () => {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [updatingDetails, setUpdatingDetails] = useState(false);
-  const [newDetails, setNewDetails] = useState({
-    username: "",
-    email: "",
-    // Add more fields as needed
-  });
+
+  // Initialize newUsername and newEmail with the correct types
+  const [newUsername, setNewUsername] = useState("");
+  const [newEmail, setNewEmail] = useState("");
+
   const getUserDetails = async () => {
     try {
       const response = await axios.get("/api/me");
       setUser(response.data.data);
+      setNewUsername(response.data.data.username);
+      setNewEmail(response.data.data.email);
     } catch (error) {
       console.error("Error fetching user details:", error);
       // Redirect to login if there is an error or user is not authenticated
       router.push("/login");
     }
   };
+
   useEffect(() => {
     // Fetch user details when the component mounts
     getUserDetails();
@@ -32,7 +34,8 @@ const ProfilePage = () => {
     try {
       // Perform logout
       await axios.get("/api/users/logout");
-      router.push("/login");
+      router.push("/");
+      window.location.reload();
     } catch (error: any) {
       console.error("Error during logout:", error.message);
     }
@@ -43,16 +46,22 @@ const ProfilePage = () => {
     setUpdatingDetails((prev) => !prev);
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setNewDetails((prev) => ({ ...prev, [name]: value }));
+  const handleChangeUsername = (e: any) => {
+    setNewUsername(e.target.value);
   };
 
-  const handleUpdateSubmit = async (e) => {
+  const handleChangeEmail = (e: any) => {
+    setNewEmail(e.target.value);
+  };
+
+  const handleUpdateSubmit = async (e: any) => {
     e.preventDefault();
     try {
       // Send the updated details to the server
-      const response = await axios.put("/api/users/update", newDetails);
+      const response = await axios.put("/api/users/update", {
+        username: newUsername,
+        email: newEmail,
+      });
       // Log the success message
       console.log("Details updated successfully:", response.data.message);
       // Fetch updated user details
@@ -61,11 +70,8 @@ const ProfilePage = () => {
       console.error("Error updating details:", error.message);
     } finally {
       // Reset the form and hide the update details form
-      setNewDetails({
-        username: "",
-        email: "",
-        // Reset more fields as needed
-      });
+      setNewUsername("");
+      setNewEmail("");
       setUpdatingDetails(false);
     }
   };
@@ -79,7 +85,7 @@ const ProfilePage = () => {
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
       <div className="container mx-auto p-8">
         <h2 className="font-[mine] text-6xl text-white pt-32 px-10">
-          Welcome, {user.username}!
+          Welcome, {newUsername}!
         </h2>
 
         <div className="bg-white bg-opacity-10 p-6 rounded-md shadow-md mt-8">
@@ -87,7 +93,7 @@ const ProfilePage = () => {
             Your Profile Details
           </h3>
           <p className="text-gray-300">
-            <strong>Email:</strong> {user.email}
+            <strong>Email:</strong> {newEmail}
           </p>
           {/* Add more user details as needed */}
         </div>
@@ -96,7 +102,7 @@ const ProfilePage = () => {
           // Update Details Form
           <form
             className="bg-white bg-opacity-10 p-6 rounded-md shadow-md mt-8"
-            // onSubmit={handleUpdateSubmit}
+            onSubmit={handleUpdateSubmit}
           >
             <h3 className="text-xl font-medium text-white mb-4">
               Update Your Details
@@ -111,9 +117,8 @@ const ProfilePage = () => {
               <input
                 type="text"
                 id="username"
-                name="username"
-                value={newDetails.username}
-                onChange={handleChange}
+                value={newUsername}
+                onChange={handleChangeUsername}
                 className="w-full px-3 py-2 border rounded-md focus:outline-none border-gray-300"
               />
             </div>
@@ -127,9 +132,8 @@ const ProfilePage = () => {
               <input
                 type="email"
                 id="email"
-                name="email"
-                value={newDetails.email}
-                onChange={handleChange}
+                value={newEmail}
+                onChange={handleChangeEmail}
                 className="w-full px-3 py-2 border rounded-md focus:outline-none border-gray-300"
               />
             </div>
