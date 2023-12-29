@@ -21,22 +21,20 @@ const EventCard = ({
   const isEventUpcoming = new Date(eventDate) > new Date();
 
   return (
-    <div className="bg-white shadow-lg rounded-md overflow-hidden w-96">
+    <div className="bg-white bg-opacity-20 shadow-lg rounded-md overflow-hidden w-96">
       <div className="relative h-72 w-full">
         <Image src={imageUrl} alt={eventName} layout="fill" objectFit="cover" />
       </div>
 
       <div className="p-4">
-        <h2 className="text-2xl font-semibold mb-2">{eventName}</h2>
+        <h2 className="text-2xl text-white font-semibold mb-2">{eventName}</h2>
 
-        <p className="text-gray-600 mb-4">
+        <p className="mb-4 text-white">
           <span className="mr-2">{eventDate}</span>•
           <span className="ml-2">{eventLocation}</span>
         </p>
 
-        <p className="text-gray-700 mb-4">
-          Event description goes here...
-        </p>
+        <p className="text-white mb-4">Event description goes here...</p>
 
         <Link
           href={`/events/${eventId}`}

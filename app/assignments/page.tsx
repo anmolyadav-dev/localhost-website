@@ -63,7 +63,7 @@ const Page = () => {
             className="px-4 py-2 w-full border rounded-md"
           />
           <div className="absolute top-2 right-4 flex items-center ">
-            <IoSearch className="text-gray-500" size={25}/>
+            <IoSearch className="text-gray-500" size={25} />
           </div>
         </div>
         <select
@@ -75,12 +75,12 @@ const Page = () => {
           <option value="">Filter by Tag</option>
           <option value="HTML">HTML</option>
           <option value="CSS">CSS</option>
-          <option value="JavaScript">SQL</option>
-          <option value="JavaScript">Database Design</option>
-          <option value="JavaScript">Python</option>
-          <option value="JavaScript">Machine Learning</option>
-          <option value="JavaScript">TensorFlow</option>
-          {/* Add more options as needed */}
+          <option value="JavaScript">JavaScript</option>
+          <option value="SQL">SQL</option>
+          <option value="Database Design">Database Design</option>
+          <option value="Python">Python</option>
+          <option value="Machine Learning">Machine Learning</option>
+          <option value="TensorFlow">TensorFlow</option>
         </select>
       </div>
 
