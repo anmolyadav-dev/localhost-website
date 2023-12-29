@@ -86,7 +86,7 @@ const ProfilePage = () => {
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
       <div className="container mx-auto p-8">
-        <h2 className="font-[mine] text-6xl text-white pt-32 px-10">
+        <h2 className="font-[mine] text-5xl lg:text-6xl text-white pt-32 px-10">
           Welcome, {newUsername}!
         </h2>
 
