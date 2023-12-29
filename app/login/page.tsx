@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 // Define Yup schema for form validation
 const loginSchema = Yup.object().shape({
@@ -20,6 +21,7 @@ const LoginPage = () => {
       try {
         const response = await axios.post('api/users/login', values);
         // console.log(response);
+        toast.success("Login Successful!");
         router.push('/profile');
         window.location.reload();
       } catch (error: any) {

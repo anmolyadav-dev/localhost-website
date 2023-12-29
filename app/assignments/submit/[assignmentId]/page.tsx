@@ -5,6 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import toast from "react-hot-toast";
 
 // ... (other imports)
 
@@ -48,8 +49,8 @@ const Page = () => {
             assignmentNumber: parseInt(assignmentId as string),
             githubLink: values.githubLink,
           });
-
-          alert("Assignment submitted successfully!");
+          router.push('/assignments')
+          toast.success("Assignment submitted successfully!");
 
           resetForm();
         }

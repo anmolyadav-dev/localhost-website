@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/Navbar'
+import { Toaster } from 'react-hot-toast'
 
 
 export const metadata: Metadata = {
@@ -20,6 +20,7 @@ export default function RootLayout({
         <div className="fixed min-w-full top-0 z-50">
           <Navbar />
         </div>
+        <Toaster position="bottom-right" />
         {children}
       </body>
     </html>

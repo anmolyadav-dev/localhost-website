@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 // Define the validation schema
 const signupSchema = Yup.object().shape({
@@ -30,8 +31,7 @@ const SignupPage = () => {
 
       // Redirect to login page after successful signup
       router.push("/login");
-
-      console.log("Signup Successful!", values);
+      toast.success("Signup Successful!");
       // setSubmitting(false);
     } catch (error) {
       // Handle error (e.g., display an error message)
