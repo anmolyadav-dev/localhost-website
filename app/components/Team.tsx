@@ -10,6 +10,11 @@ const Team = () => {
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
           <TeamCard name="Vineet Agarwal" github="Github" linkedin="LinkedIn" />
           <TeamCard
+            name="Ishaan Upadhyay"
+            github="Github"
+            linkedin="LinkedIn"
+          />
+          <TeamCard
             name="Kanishk Bhansode"
             github="Github"
             linkedin="LinkedIn"

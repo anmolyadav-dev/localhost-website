@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
         return NextResponse.json({
             error: error.message
         }, {
-            status: 400
+            status: 500
         })
     }
     

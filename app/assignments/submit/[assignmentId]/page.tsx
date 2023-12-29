@@ -1,24 +1,67 @@
-"use client"
-import { useParams } from "next/navigation";
-import { useState } from "react";
+// Import necessary libraries
+"use client";
+import { useEffect, useState } from "react";
+import { useParams, useRouter } from "next/navigation";
+import axios from "axios";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
+// ... (other imports)
 
 const Page = () => {
+  const router = useRouter();
   const { assignmentId } = useParams();
-  const [githubLink, setGithubLink] = useState("");
+  const [username, setUsername] = useState(null);
 
-  const handleSubmission = async () => {
+  const getUserDetails = async () => {
     try {
-      // Implement submission logic (e.g., API call, database interaction)
-      // await submitAssignment(assignmentId, githubLink); // Replace with your submission logic
-      // Redirect to success page
+      const res = await axios.get("/api/me");
+      setUsername(res.data.data.username);
     } catch (error) {
-      // Display user-friendly error message
-      alert(
-        "An error occurred while submitting the assignment. Please try again later."
-      );
+      console.error("Error fetching user details:", error);
     }
   };
+  useEffect(() => {
+    getUserDetails();
+  }, []);
+
+  // Formik form validation schema
+  const validationSchema = Yup.object({
+    githubLink: Yup.string()
+      .url("Invalid URL")
+      .required("GitHub Link is required"),
+  });
+
+  // Formik form handling
+  const formik = useFormik({
+    initialValues: {
+      githubLink: "",
+    },
+    validationSchema: validationSchema,
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      try {
+        if (!username) {
+          router.push("/login");
+        } else {
+          const response = await axios.post("/api/users/submit", {
+            username,
+            assignmentNumber: parseInt(assignmentId as string),
+            githubLink: values.githubLink,
+          });
+
+          alert("Assignment submitted successfully!");
+
+          resetForm();
+        }
+      } catch (error) {
+        console.error("Error submitting assignment:", error);
+
+        alert("Error submitting assignment. Please try again later.");
+      } finally {
+        setSubmitting(false);
+      }
+    },
+  });
 
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
@@ -28,29 +71,53 @@ const Page = () => {
           Submit Assignment #{assignmentId}
         </h2>
         <div className="max-w-md mx-auto bg-white bg-opacity-10 p-6 rounded-md shadow-md">
-          {/* GitHub Link Submission Form */}
-          <label
-            htmlFor="githublink"
-            className="block text-sm font-medium text-white mb-2"
-          >
-            Your GitHub Link:
-          </label>
-          <input
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
-            type="text"
-            name="githublink"
-            value={githubLink}
-            placeholder="Github Link"
-            onChange={(e) => setGithubLink(e.target.value)}
-          />
+          {/* Formik Form */}
+          <form onSubmit={formik.handleSubmit}>
+            {/* Username Display */}
+            <div className="mb-4">
+              <label className="block text-sm font-medium text-white">
+                Your Username:
+              </label>
+              <p className="text-white capitalize">{username}</p>
+            </div>
 
-          {/* Submission Button */}
-          <button
-            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300"
-            onClick={handleSubmission}
-          >
-            Submit
-          </button>
+            {/* GitHub Link Input */}
+            <div className="mb-4">
+              <label
+                htmlFor="githubLink"
+                className="block text-sm font-medium text-white"
+              >
+                Your GitHub Link:
+              </label>
+              <input
+                id="githubLink"
+                name="githubLink"
+                type="text"
+                className={`w-full px-3 py-2 border rounded-md focus:outline-none ${
+                  formik.touched.githubLink && formik.errors.githubLink
+                    ? "border-red-500"
+                    : "border-gray-300"
+                }`}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.githubLink}
+              />
+              {formik.touched.githubLink && formik.errors.githubLink ? (
+                <div className="text-red-500 text-sm mt-1">
+                  {formik.errors.githubLink}
+                </div>
+              ) : null}
+            </div>
+
+            {/* Submission Button */}
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300"
+              disabled={formik.isSubmitting}
+            >
+              {formik.isSubmitting ? "Submitting..." : "Submit"}
+            </button>
+          </form>
         </div>
       </div>
     </div>
