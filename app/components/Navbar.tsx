@@ -57,7 +57,7 @@ const Navbar = () => {
                 <IoMdClose size={30} />
               </button>
             </div>
-            <ul className="flex flex-col gap-8 text-4xl ">
+            <ul className="flex flex-col gap-4 text-2xl ">
               <Link href="/about" onClick={closeMobileMenu}>
                 <li className="hover:text-[#4DFFDB] cursor-pointer">About</li>
               </Link>

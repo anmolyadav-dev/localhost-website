@@ -59,7 +59,7 @@ const Home: NextPage = () => {
         HACK
         <span className="text-[#4DFFDB]">IN</span> IIITP
       </h2>
-      <h4 className="text-white text-center text-4xl lg:text-6xl font-[northwood]">
+      <h4 className="text-white text-center mt-4 text-5xl lg:text-7xl font-[northwood]">
         Registration Opens in
       </h4>
       <div className="flex flex-col items-center">
