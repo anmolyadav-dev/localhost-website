@@ -3,6 +3,13 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { TimerContainer } from "./TimerContainer";
 
+interface TimerProps {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
 const Home: NextPage = () => {
   const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState<number>(0);
