@@ -8,14 +8,14 @@ const Team = () => {
       </h2>
       <div className="flex flex-col gap-10 px-5 lg:px-10">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
-          <TeamCard name="Vineet Agarwal" github="Github" linkedin="LinkedIn" />
+          <TeamCard name="Vinit Agarwal" github="Github" linkedin="LinkedIn" />
           <TeamCard
-            name="Ishaan Upadhyay"
+            name="Ishan Upadhyay"
             github="Github"
             linkedin="LinkedIn"
           />
           <TeamCard
-            name="Kanishk Bhansode"
+            name="Kanishka Bansode"
             github="Github"
             linkedin="LinkedIn"
           />
@@ -47,6 +47,11 @@ const Team = () => {
             github="https://github.com/jaisomani04"
             linkedin="http://www.linkedin.com/in/jaisomani04"
           />
+          <TeamCard
+          name="Tushar Sharma"
+          github="https://github.com/tshrrx"
+          linkedin="https://www.linkedin.com/in/tushar-hirekhan-b71a10258/"
+        />
         </div>
       </div>
     </div>
