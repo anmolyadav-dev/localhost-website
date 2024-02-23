@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
     default: false,
   },
   forgotPassword: String,
-  forgotPasswordExpiry: Date, // Corrected the typo in the property name
+  forgotPasswordExpiry: Date,
   verifyToken: String,
   verifyTokenExpiry: Date,
 });

@@ -16,19 +16,20 @@ const HackathonModal = ({
         isOpen={isOpen}
         onRequestClose={onClose}
         contentLabel="Hackathon Modal"
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-lg shadow-lg mt-10"
         overlayClassName="fixed inset-0 bg-gray-700 bg-opacity-75"
       >
         <div className="text-center">
-          <div className="mb-4">
-            <Image
-              src="/hackathon-poster.jpg"
-              alt="Hackathon Poster"
-              width={300}
-              height={300}
-            />
-          </div>
           <Link href="/hackiniiitp">
+            <div className="mb-4 flex place-content-center">
+              <Image
+                src="/images/hackathon.png"
+                alt="Hackathon Poster"
+                width={300}
+                height={300}
+              />
+            </div>
+
             <p className="mb-4">
               Click here to learn more about Hackin IIIT Pune.
             </p>

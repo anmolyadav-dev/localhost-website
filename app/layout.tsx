@@ -1,25 +1,22 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import Navbar from './components/Navbar'
-import { Toaster } from 'react-hot-toast'
-
+import type { Metadata } from "next";
+import "./globals.css";
+import { Toaster } from "react-hot-toast";
+import Navbarchoice from "./components/NavbarChoice";
 
 export const metadata: Metadata = {
-  title: 'Localhost',
-  description: 'Dev Community of IIIT Pune',
-}
+  title: "Localhost",
+  description: "Dev Community of IIIT Pune",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body>
-        <div className="fixed min-w-full top-0 z-50">
-          <Navbar />
-        </div>
+        <Navbarchoice />
         <Toaster position="bottom-right" />
         {children}
       </body>

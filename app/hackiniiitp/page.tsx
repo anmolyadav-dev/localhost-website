@@ -1,7 +1,7 @@
 "use client";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
-import { TimerContainer } from "./TimerContainer";
+import { TimerContainer } from "./components/TimerContainer";
 
 interface TimerProps {
   days: number;
