@@ -67,9 +67,9 @@ const Navbarhack = () => {
               <Link href="/hackiniiitp/teams" onClick={closeMobileMenu}>
                 <li className="hover:text-[#4DFFDB] cursor-pointer">Teams</li>
               </Link>
-              <Link href="/hackiniiitp/submissions" onClick={closeMobileMenu}>
+              <Link href="/hackiniiitp/submit" onClick={closeMobileMenu}>
                 <li className="hover:text-[#4DFFDB] cursor-pointer">
-                  Submissions
+                  Submit Project
                 </li>
               </Link>
               {user ? (
@@ -97,7 +97,7 @@ const Navbarhack = () => {
         </Link>
         <ul className="flex gap-10">
           <Link href="/hackiniiitp">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">Home</li>
+            <li className="hover:text-[#4DFFDB] cursor-pointer">HackIn IIITP</li>
           </Link>
           <Link href="/hackiniiitp/about">
             <li className="hover:text-[#4DFFDB] cursor-pointer">About</li>
@@ -105,8 +105,8 @@ const Navbarhack = () => {
           <Link href="/hackiniiitp/teams">
             <li className="hover:text-[#4DFFDB] cursor-pointer">Teams</li>
           </Link>
-          <Link href="/hackiniiitp/submissions">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">Submissions</li>
+          <Link href="/hackiniiitp/submit">
+            <li className="hover:text-[#4DFFDB] cursor-pointer">Submit Project</li>
           </Link>
           {user ? (
             <Link href="/hackiniiitp/profile">

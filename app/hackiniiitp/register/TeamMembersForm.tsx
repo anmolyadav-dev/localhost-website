@@ -29,8 +29,8 @@ const TeamMembersForm = ({
     <div className="mb-4 space-y-4 w-full">
       <p className="text-white">Team Members:</p>
       {values.teamMembers.map((member: any, index: number) => (
-        <div key={index} className="flex items-end space-x-4">
-          <div>
+        <div key={index} className=" flex lg:flex-row flex-col lg:gap-0 gap-3 lg:items-end space-x-4">
+          <div className="lg:p-0 pl-3">
             <label
               htmlFor={`teamMembers[${index}].name`}
               className="text-white block"

@@ -58,6 +58,9 @@ const Navbar = () => {
               </button>
             </div>
             <ul className="flex flex-col gap-4 text-2xl ">
+              <Link href="/hackiniiitp" onClick={closeMobileMenu}>
+                <li className="hover:text-[#4DFFDB] cursor-pointer">HackIn IIITP</li>
+              </Link>
               <Link href="/about" onClick={closeMobileMenu}>
                 <li className="hover:text-[#4DFFDB] cursor-pointer">About</li>
               </Link>
@@ -93,6 +96,9 @@ const Navbar = () => {
           <Image src="/images/logo.png" alt="Logo" width={192} height={32} />
         </Link>
         <ul className="flex gap-10">
+          <Link href="/hackiniiitp">
+            <li className="hover:text-[#4DFFDB] cursor-pointer">HackIn IIITP</li>
+          </Link>
           <Link href="/about">
             <li className="hover:text-[#4DFFDB] cursor-pointer">About</li>
           </Link>
