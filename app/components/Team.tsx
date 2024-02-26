@@ -48,7 +48,7 @@ const Team = () => {
             linkedin="http://www.linkedin.com/in/jaisomani04"
           />
           <TeamCard
-          name="Tushar Sharma"
+          name="Tushar Hirekhan"
           github="https://github.com/tshrrx"
           linkedin="https://www.linkedin.com/in/tushar-hirekhan-b71a10258/"
         />
