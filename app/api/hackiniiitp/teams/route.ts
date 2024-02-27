@@ -4,11 +4,11 @@ import { NextRequest, NextResponse } from "next/server";
 import Team, { ITeam } from "../../models/teamModel"; // Assuming you have a Team model
 
 connect();
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest, res: NextResponse) {
   try {
     // Fetch all teams from the database, excluding the password field
     const teams: ITeam[] = await Team.find({},{password:0,_id:0,"teamMembers._id":0,"teamMembers.email":0});
-    console.log(teams);
+    // console.log(teams);
     // Return the list of teams in the response
     return NextResponse.json({
       teams,
