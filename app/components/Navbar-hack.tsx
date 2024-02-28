@@ -79,11 +79,18 @@ const Navbarhack = () => {
                   </li>
                 </Link>
               ) : (
-                <Link href="/hackiniiitp/login" onClick={closeMobileMenu}>
-                  <li className="hover:text-[#4DFFDB] cursor-pointer">
-                    Login / Register
-                  </li>
-                </Link>
+                <li className="divide-x-2 flex">
+                  <Link href="/hackiniiitp/login">
+                    <div className="hover:text-[#4DFFDB] cursor-pointer mr-2">
+                      Login
+                    </div>
+                  </Link>
+                  <Link href="/hackiniiitp/register">
+                    <div className="hover:text-[#4DFFDB] cursor-pointer ml-2">
+                      Register
+                    </div>
+                  </Link>
+                </li>
               )}
             </ul>
           </div>
@@ -97,7 +104,9 @@ const Navbarhack = () => {
         </Link>
         <ul className="flex gap-10">
           <Link href="/hackiniiitp">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">HackIn IIITP</li>
+            <li className="hover:text-[#4DFFDB] cursor-pointer">
+              HackIn IIITP
+            </li>
           </Link>
           <Link href="/hackiniiitp/about">
             <li className="hover:text-[#4DFFDB] cursor-pointer">About</li>
@@ -106,7 +115,9 @@ const Navbarhack = () => {
             <li className="hover:text-[#4DFFDB] cursor-pointer">Teams</li>
           </Link>
           <Link href="/hackiniiitp/submit">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">Submit Project</li>
+            <li className="hover:text-[#4DFFDB] cursor-pointer">
+              Submit Project
+            </li>
           </Link>
           {user ? (
             <Link href="/hackiniiitp/profile">
@@ -115,11 +126,18 @@ const Navbarhack = () => {
               </li>
             </Link>
           ) : (
-            <Link href="/hackiniiitp/login">
-              <li className="hover:text-[#4DFFDB] cursor-pointer">
-                Login / Register
-              </li>
-            </Link>
+            <li className="divide-x-2 flex">
+              <Link href="/hackiniiitp/login">
+                <div className="hover:text-[#4DFFDB] cursor-pointer mr-2">
+                  Login
+                </div>
+              </Link>
+              <Link href="/hackiniiitp/register">
+                <div className="hover:text-[#4DFFDB] cursor-pointer ml-2">
+                  Register
+                </div>
+              </Link>
+            </li>
           )}
         </ul>
       </header>
