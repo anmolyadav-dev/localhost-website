@@ -5,17 +5,11 @@ import Team, { ITeam } from "../../models/teamModel"; // Assuming you have a Tea
 import { refreshData ,fetchData } from "../../helpers/CacheFunctions";
 
 connect();
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function GET(req: NextRequest, res: NextResponse) {
   try {
     // Fetch all teams from the database, excluding the password field
-    let teams:ITeam[] | null ;
-    teams = await fetchData();
-
-    if(!teams){
-     teams = await Team.find({},{password:0,_id:0,"teamMembers._id":0,"teamMembers.email":0});
-     refreshData(teams);
-    }
-
+    const teams: ITeam[] = await Team.find({},{password:0,_id:0,"teamMembers._id":0,"teamMembers.email":0});
+    
     // Return the list of teams in the response
     return NextResponse.json({
       teams,
