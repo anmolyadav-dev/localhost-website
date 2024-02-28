@@ -80,12 +80,12 @@ const Navbarhack = () => {
                 </Link>
               ) : (
                 <li className="divide-x-2 flex">
-                  <Link href="/hackiniiitp/login">
+                  <Link href="/hackiniiitp/login" onClick={closeMobileMenu}>
                     <div className="hover:text-[#4DFFDB] cursor-pointer mr-2">
                       Login
                     </div>
                   </Link>
-                  <Link href="/hackiniiitp/register">
+                  <Link href="/hackiniiitp/register" onClick={closeMobileMenu}>
                     <div className="hover:text-[#4DFFDB] cursor-pointer ml-2">
                       Register
                     </div>

@@ -23,10 +23,10 @@ const HackathonModal = ({
           <Link href="/hackiniiitp">
             <div className="mb-4 flex place-content-center">
               <Image
-                src="/images/hackathon.png"
+                src="/images/hackathon.jpg"
                 alt="Hackathon Poster"
-                width={300}
-                height={300}
+                width={250}
+                height={200}
               />
             </div>
 

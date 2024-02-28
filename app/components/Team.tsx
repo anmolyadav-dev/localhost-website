@@ -9,11 +9,7 @@ const Team = () => {
       <div className="flex flex-col gap-10 px-5 lg:px-10">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
           <TeamCard name="Vinit Agarwal" github="Github" linkedin="LinkedIn" />
-          <TeamCard
-            name="Ishan Upadhyay"
-            github="Github"
-            linkedin="LinkedIn"
-          />
+          <TeamCard name="Ishan Upadhyay" github="Github" linkedin="LinkedIn" />
           <TeamCard
             name="Kanishka Bansode"
             github="Github"
@@ -21,7 +17,7 @@ const Team = () => {
           />
           <TeamCard name="Prakhar Singh" github="Github" linkedin="LinkedIn" />
         </div>
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
+        <div className="flex flex-col flex-wrap lg:flex-row justify-center items-center gap-10">
           <TeamCard
             name="Ashmit Jagtap"
             github="https://github.com/ashmit-coder"
@@ -43,15 +39,15 @@ const Team = () => {
             linkedin="https://www.linkedin.com/in/manas-agarwal-a13623256/"
           />
           <TeamCard
+            name="Tushar Hirekhan"
+            github="https://github.com/tshrrx"
+            linkedin="https://www.linkedin.com/in/tushar-hirekhan-b71a10258/"
+          />
+          <TeamCard
             name="Jai Somani"
             github="https://github.com/jaisomani04"
             linkedin="http://www.linkedin.com/in/jaisomani04"
           />
-          <TeamCard
-          name="Tushar Hirekhan"
-          github="https://github.com/tshrrx"
-          linkedin="https://www.linkedin.com/in/tushar-hirekhan-b71a10258/"
-        />
         </div>
       </div>
     </div>
