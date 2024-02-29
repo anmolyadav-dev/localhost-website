@@ -47,9 +47,9 @@ const Page = () => {
 
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
-      <h2 className="font-[mine] text-4xl lg:text-6xl text-white pt-32 px-10">
-        A<span className="text-[#4DFFDB]">SS</span>IGNMENT
-        <span className="text-[#4DFFDB]">S</span>
+      <h2 className="font-minecraft text-4xl lg:text-6xl text-white pt-32 px-10">
+        A<span className="text-greenblue">SS</span>IGNMENT
+        <span className="text-greenblue">S</span>
       </h2>
 
       {/* Search Bar */}

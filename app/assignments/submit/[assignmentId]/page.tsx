@@ -49,7 +49,7 @@ const Page = () => {
             assignmentNumber: parseInt(assignmentId as string),
             githubLink: values.githubLink,
           });
-          router.push('/assignments')
+          router.push("/assignments");
           toast.success("Assignment submitted successfully!");
 
           resetForm();
@@ -68,7 +68,7 @@ const Page = () => {
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
       {/* ... rest of your page content */}
       <div className="container mx-auto p-8">
-        <h2 className="font-[mine] text-4xl text-white mb-6 pt-32">
+        <h2 className="font-minecraft text-4xl text-white mb-6 pt-32">
           Submit Assignment #{assignmentId}
         </h2>
         <div className="max-w-md mx-auto bg-white bg-opacity-10 p-6 rounded-md shadow-md">

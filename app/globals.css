@@ -3,10 +3,22 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'mine';
+    font-family: 'Minecraft';
     src: url('../public/font/Minecraft.ttf');
 }
 @font-face {
-    font-family: 'northwood';
+    font-family: 'Northwood';
     src: url('../public/font/Northwood.ttf');
+}
+@font-face {
+    font-family: 'Glitch';
+    src: url('../public/font/DoctorGlitch.otf');
+}
+@font-face {
+    font-family: 'Technopollas';
+    src: url('../public/font/Technopollas.otf');
+}
+@font-face {
+    font-family: 'NIKOLETA';
+    src: url('../public/font/NIKOLETA.otf');
 }

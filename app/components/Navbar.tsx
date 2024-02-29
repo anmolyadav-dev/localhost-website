@@ -59,28 +59,30 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col gap-4 text-2xl ">
               <Link href="/hackiniiitp" onClick={closeMobileMenu}>
-                <li className="hover:text-[#4DFFDB] cursor-pointer">HackIn IIITP</li>
+                <li className="hover:text-greenblue cursor-pointer">
+                  HackIn IIITP
+                </li>
               </Link>
               <Link href="/about" onClick={closeMobileMenu}>
-                <li className="hover:text-[#4DFFDB] cursor-pointer">About</li>
+                <li className="hover:text-greenblue cursor-pointer">About</li>
               </Link>
               <Link href="/assignments" onClick={closeMobileMenu}>
-                <li className="hover:text-[#4DFFDB] cursor-pointer">
+                <li className="hover:text-greenblue cursor-pointer">
                   Assignments
                 </li>
               </Link>
               <Link href="/events" onClick={closeMobileMenu}>
-                <li className="hover:text-[#4DFFDB] cursor-pointer">Events</li>
+                <li className="hover:text-greenblue cursor-pointer">Events</li>
               </Link>
               {user ? (
                 <Link href="/profile" onClick={closeMobileMenu}>
-                  <li className="hover:text-[#4DFFDB] cursor-pointer capitalize">
+                  <li className="hover:text-greenblue cursor-pointer capitalize">
                     {user}
                   </li>
                 </Link>
               ) : (
                 <Link href="/login" onClick={closeMobileMenu}>
-                  <li className="hover:text-[#4DFFDB] cursor-pointer">
+                  <li className="hover:text-greenblue cursor-pointer">
                     Login / Register
                   </li>
                 </Link>
@@ -97,26 +99,28 @@ const Navbar = () => {
         </Link>
         <ul className="flex gap-10">
           <Link href="/hackiniiitp">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">HackIn IIITP</li>
+            <li className="hover:text-greenblue cursor-pointer">
+              HackIn IIITP
+            </li>
           </Link>
           <Link href="/about">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">About</li>
+            <li className="hover:text-greenblue cursor-pointer">About</li>
           </Link>
           <Link href="/assignments">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">Assignments</li>
+            <li className="hover:text-greenblue cursor-pointer">Assignments</li>
           </Link>
           <Link href="/events">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">Events</li>
+            <li className="hover:text-greenblue cursor-pointer">Events</li>
           </Link>
           {user ? (
             <Link href="/profile">
-              <li className="hover:text-[#4DFFDB] cursor-pointer capitalize">
+              <li className="hover:text-greenblue cursor-pointer capitalize">
                 {user}
               </li>
             </Link>
           ) : (
             <Link href="/login">
-              <li className="hover:text-[#4DFFDB] cursor-pointer">
+              <li className="hover:text-greenblue cursor-pointer">
                 Login / Register
               </li>
             </Link>

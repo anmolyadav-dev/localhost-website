@@ -1,19 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100");
-
-h1 {
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-}
-
 #wrapper {
   text-align: center;
 }
 
 .glitch {
   position: relative;
-  color: white;
-  font-size: 4em;
   letter-spacing: 0.5em;
   animation: glitch-skew 1s infinite linear alternate-reverse;
 }
@@ -41,10 +31,6 @@ h1 {
   animation: glitch-anim2 1s infinite linear alternate-reverse;
 }
 
-/* Creates an animation with 20 steaps. For each step, it calculates 
-a percentage for the specific step. It then generates a random clip
-box to be used for the random glitch effect. Also adds a very subtle
-skew to change the 'thickness' of the glitch.*/
 @keyframes glitch-anim {
   0% {
     clip: rect(99px, 9999px, 55px, 0);

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useParams } from "next/navigation";
 
 const EventDetailPage = () => {
@@ -7,27 +7,27 @@ const EventDetailPage = () => {
   // Handle potential missing eventId
   const displayEventId = eventId || "no Event ID";
 
-const eventData = {
-  eventName: "Next.js Meetup",
-  eventDate: "December 15, 2023",
-  eventLocation: "Virtual Event",
-  eventDescription:
-    "Join us for an exciting Next.js meetup with informative talks and networking!",
-  speakers: [
-    { id: 1, name: "John Doe", title: "Senior Developer" },
-    { id: 2, name: "Jane Smith", title: "Frontend Engineer" },
-  ],
-};
+  const eventData = {
+    eventName: "Next.js Meetup",
+    eventDate: "December 15, 2023",
+    eventLocation: "Virtual Event",
+    eventDescription:
+      "Join us for an exciting Next.js meetup with informative talks and networking!",
+    speakers: [
+      { id: 1, name: "John Doe", title: "Senior Developer" },
+      { id: 2, name: "Jane Smith", title: "Frontend Engineer" },
+    ],
+  };
 
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
-      <h2 className="font-[mine] text-6xl text-white pt-32 px-10">
-        E<span className="text-[#4DFFDB]">V</span>ENT DETAIL
-        <span className="text-[#4DFFDB]">S</span>
+      <h2 className="font-minecraft text-6xl text-white pt-32 px-10">
+        E<span className="text-greenblue">V</span>ENT DETAIL
+        <span className="text-greenblue">S</span>
       </h2>
       <div className="">
         <div className="container mx-auto p-8">
-          <h2 className="font-[mine] text-4xl text-white mb-6">
+          <h2 className="font-minecraft text-4xl text-white mb-6">
             Event Details - #{eventId}
           </h2>
           <div className="max-w-2xl mx-auto bg-white p-6 rounded-md shadow-md">

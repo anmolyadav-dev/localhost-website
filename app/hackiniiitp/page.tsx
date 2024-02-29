@@ -1,27 +1,49 @@
 "use client";
 import type { NextPage } from "next";
+import Image from "next/image";
 import React from "react";
+import GlitchText from "./components/GlitchText/Glitch";
 
 const Home: NextPage = () => {
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center flex flex-col justify-center items-center">
-      <h2 className="font-[mine] text-4xl lg:text-6xl text-white  px-10">
-        HACK
-        <span className="text-[#4DFFDB]">IN</span> IIITP
-      </h2>
-      <p className="text-white text-lg lg:text-xl mt-4 px-20 text-center">
-        Welcome to HackINIIITP - a 36-hour intra-college hackathon at IIIT Pune.
-        <br/>
-        Join us for an exciting coding marathon where you can showcase your
-        creativity, innovation, and technical skills.
-      </p>
-      <div className="mt-8">
-        <p className="text-white text-lg lg:text-xl">
-          Duration: 36 Hours
-        </p>
-        <p className="text-white text-lg lg:text-xl">
-          Prize Pool: ₹15,000
-        </p>
+      <div className="text-white mt-32 text-center flex flex-col gap-4">
+        <div className="flex flex-col justify-center items-center">
+          <h2 className="text-white uppercase text-xl text-center">
+            Sponsored by
+          </h2>
+          <Image
+            src="/images/Sponsor.png"
+            alt="Sponsors"
+            width={200}
+            height={200}
+            className="my-2"
+          />
+        </div>
+        <h1 className="my-4">
+          <GlitchText />
+        </h1>
+        <h2 className="text-white text-3xl text-center font-technopollas">
+          Hack for the beginning
+        </h2>
+        <div className="text-4xl font-NIKOLETA">
+          <h3>36 Hours</h3>
+          <h3>Online Hackathon</h3>
+        </div>
+        <div className="text-2xl font-technopollas">
+          <p>with a</p>
+          <h4 className="text-4xl">Prize Pool</h4>
+          <p>of</p>
+          <h5 className="text-7xl font-glitch">
+            <span className="text-3xl">RS</span>15,000
+          </h5>
+        </div>
+        <div className="text-4xl font-technopollas">
+          <p>on</p>
+          <h4>
+            1st <span className="font-mono font-bold">-</span> 3rd 2024
+          </h4>
+        </div>
       </div>
       <a
         href="/hackiniiitp/register"
@@ -29,7 +51,7 @@ const Home: NextPage = () => {
       >
         Register Now
       </a>
-      </div>
+    </div>
   );
 };
 

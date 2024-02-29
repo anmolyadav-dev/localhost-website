@@ -36,8 +36,8 @@ const eventsData = [
 const Page = () => {
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
-      <h2 className="font-[mine] text-4xl lg:text-6xl text-white pt-32 px-10">
-        E<span className="text-[#4DFFDB]">V</span>ENTS
+      <h2 className="font-minecraft text-4xl lg:text-6xl text-white pt-32 px-10">
+        E<span className="text-greenblue">V</span>ENTS
       </h2>
 
       <div className="flex flex-wrap justify-center items-center gap-4 p-8">

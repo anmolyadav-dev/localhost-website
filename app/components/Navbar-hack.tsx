@@ -59,34 +59,34 @@ const Navbarhack = () => {
             </div>
             <ul className="flex flex-col gap-4 text-2xl ">
               <Link href="/hackiniiitp" onClick={closeMobileMenu}>
-                <li className="hover:text-[#4DFFDB] cursor-pointer">Home</li>
+                <li className="hover:text-greenblue cursor-pointer">Home</li>
               </Link>
               <Link href="/hackiniiitp/about" onClick={closeMobileMenu}>
-                <li className="hover:text-[#4DFFDB] cursor-pointer">About</li>
+                <li className="hover:text-greenblue cursor-pointer">About</li>
               </Link>
               <Link href="/hackiniiitp/teams" onClick={closeMobileMenu}>
-                <li className="hover:text-[#4DFFDB] cursor-pointer">Teams</li>
+                <li className="hover:text-greenblue cursor-pointer">Teams</li>
               </Link>
               <Link href="/hackiniiitp/submit" onClick={closeMobileMenu}>
-                <li className="hover:text-[#4DFFDB] cursor-pointer">
+                <li className="hover:text-greenblue cursor-pointer">
                   Submit Project
                 </li>
               </Link>
               {user ? (
                 <Link href="/hackiniiitp/profile" onClick={closeMobileMenu}>
-                  <li className="hover:text-[#4DFFDB] cursor-pointer capitalize">
+                  <li className="hover:text-greenblue cursor-pointer capitalize">
                     {user}
                   </li>
                 </Link>
               ) : (
                 <li className="divide-x-2 flex">
                   <Link href="/hackiniiitp/login" onClick={closeMobileMenu}>
-                    <div className="hover:text-[#4DFFDB] cursor-pointer mr-2">
+                    <div className="hover:text-greenblue cursor-pointer mr-2">
                       Login
                     </div>
                   </Link>
                   <Link href="/hackiniiitp/register" onClick={closeMobileMenu}>
-                    <div className="hover:text-[#4DFFDB] cursor-pointer ml-2">
+                    <div className="hover:text-greenblue cursor-pointer ml-2">
                       Register
                     </div>
                   </Link>
@@ -104,36 +104,36 @@ const Navbarhack = () => {
         </Link>
         <ul className="flex gap-10">
           <Link href="/hackiniiitp">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">
+            <li className="hover:text-greenblue cursor-pointer">
               HackIn IIITP
             </li>
           </Link>
           <Link href="/hackiniiitp/about">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">About</li>
+            <li className="hover:text-greenblue cursor-pointer">About</li>
           </Link>
           <Link href="/hackiniiitp/teams">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">Teams</li>
+            <li className="hover:text-greenblue cursor-pointer">Teams</li>
           </Link>
           <Link href="/hackiniiitp/submit">
-            <li className="hover:text-[#4DFFDB] cursor-pointer">
+            <li className="hover:text-greenblue cursor-pointer">
               Submit Project
             </li>
           </Link>
           {user ? (
             <Link href="/hackiniiitp/profile">
-              <li className="hover:text-[#4DFFDB] cursor-pointer capitalize">
+              <li className="hover:text-greenblue cursor-pointer capitalize">
                 {user}
               </li>
             </Link>
           ) : (
             <li className="divide-x-2 flex">
               <Link href="/hackiniiitp/login">
-                <div className="hover:text-[#4DFFDB] cursor-pointer mr-2">
+                <div className="hover:text-greenblue cursor-pointer mr-2">
                   Login
                 </div>
               </Link>
               <Link href="/hackiniiitp/register">
-                <div className="hover:text-[#4DFFDB] cursor-pointer ml-2">
+                <div className="hover:text-greenblue cursor-pointer ml-2">
                   Register
                 </div>
               </Link>

@@ -3,8 +3,8 @@ import TeamCard from "./TeamCard";
 const Team = () => {
   return (
     <div className="bg-bg-star min-h-screen bg-left lg:bg-center text-center">
-      <h2 className="font-[mine] text-5xl text-white pt-32 pb-10 px-10">
-        <span className="text-[#4DFFDB]">CORE</span> MEMBERS
+      <h2 className="font-minecraft text-5xl text-white pt-32 pb-10 px-10">
+        <span className="text-greenblue">CORE</span> MEMBERS
       </h2>
       <div className="flex flex-col gap-10 px-5 lg:px-10">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
