@@ -33,6 +33,8 @@ const Team = () => {
             github="https://github.com/Anshulk2004"
             linkedin="https://www.linkedin.com/in/anshul-kumar-627001250/"
           />
+        </div>
+        <div className="flex flex-col flex-wrap lg:flex-row justify-center items-center gap-10">
           <TeamCard
             name="Manas Agarwal"
             github="https://github.com/manasagar"

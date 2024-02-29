@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,6 +8,8 @@ interface EventCardProps {
   eventDate: string;
   eventLocation: string;
   imageUrl: string;
+  websiteUrl: string;
+  registerUrl: string;
 }
 
 const EventCard = ({
@@ -16,6 +18,8 @@ const EventCard = ({
   eventDate,
   eventLocation,
   imageUrl,
+  websiteUrl,
+  registerUrl,
 }: EventCardProps) => {
   // Check if the event is upcoming or completed
   const isEventUpcoming = new Date(eventDate) > new Date();
@@ -23,7 +27,12 @@ const EventCard = ({
   return (
     <div className="bg-white bg-opacity-20 shadow-lg rounded-md overflow-hidden w-96">
       <div className="relative h-72 w-full">
-        <Image src={imageUrl} alt={eventName} layout="fill" objectFit="cover" />
+        <Image
+          src={imageUrl}
+          alt={eventName}
+          layout="fill"
+          objectFit="contain"
+        />
       </div>
 
       <div className="p-4">
@@ -37,18 +46,21 @@ const EventCard = ({
         <p className="text-white mb-4">Event description goes here...</p>
 
         <Link
-          href={`/events/${eventId}`}
+          href={websiteUrl ? websiteUrl : `/events/${eventId}`}
           className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 mr-2"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           View Details
         </Link>
-
-        <button
+        <Link
+          href={registerUrl ? registerUrl : "Registration button clicked"}
           className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300"
-          onClick={() => alert("Registration button clicked")}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Register
-        </button>
+        </Link>
 
         <p
           className={`mt-4 ${

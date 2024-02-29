@@ -8,27 +8,11 @@ import { IoSearch } from "react-icons/io5";
 const assignmentsData = [
   {
     assignmentId: "1",
-    assignmentTitle: "Web Development Project",
-    tags: ["HTML", "CSS", "JavaScript", "React"],
+    assignmentTitle: "Basic Web Development Project",
+    tags: ["HTML", "CSS", "JavaScript"],
     assignmentDescription:
-      "Create a responsive website using React with HTML, CSS, and JavaScript.",
-    dueDate: "2023-02-28",
-  },
-  {
-    assignmentId: "2",
-    assignmentTitle: "Database Design Assignment",
-    tags: ["SQL", "Database Design"],
-    assignmentDescription:
-      "Design a relational database for a given scenario and provide SQL queries.",
-    dueDate: "2023-03-15",
-  },
-  {
-    assignmentId: "3",
-    assignmentTitle: "Machine Learning Project",
-    tags: ["Python", "Machine Learning", "TensorFlow"],
-    assignmentDescription:
-      "Implement a machine learning model using Python and TensorFlow.",
-    dueDate: "2023-04-10",
+      "Create a responsive website using HTML, CSS, and JavaScript.",
+    dueDate: "2024-03-10",
   },
 ];
 

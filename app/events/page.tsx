@@ -5,31 +5,12 @@ import EventCard from "../components/EventCard";
 const eventsData = [
   {
     eventId: "1",
-    eventName: "Tech Conference 2023",
-    eventDate: "2023-12-29",
+    eventName: "HackIn IIITP",
+    eventDate: "2024-03-01",
     eventLocation: "Virtual",
-    imageUrl: "/images/tech_conference.jpg",
-  },
-  {
-    eventId: "2",
-    eventName: "Webinar on AI in Healthcare",
-    eventDate: "2023-04-15",
-    eventLocation: "Online",
-    imageUrl: "/images/ai_webinar.jpg",
-  },
-  {
-    eventId: "3",
-    eventName: "Hackathon: Code for a Cause",
-    eventDate: "2023-06-10",
-    eventLocation: "In-person",
     imageUrl: "/images/hackathon.jpg",
-  },
-  {
-    eventId: "4",
-    eventName: "Hackathon: Code for a Cause",
-    eventDate: "2023-06-10",
-    eventLocation: "In-person",
-    imageUrl: "/images/hackathon.jpg",
+    websiteUrl: "https://localhost.iiitp.ac.in/hackiniiitp",
+    registerUrl: "https://localhost.iiitp.ac.in/hackiniiitp/register",
   },
 ];
 
