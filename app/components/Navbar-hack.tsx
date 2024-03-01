@@ -11,18 +11,19 @@ const Navbarhack = () => {
   const [user, setUser] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const getUserDetails = async () => {
-    try {
-      const res = await axios.get("/api/me");
-      setUser(res.data.data.username);
-    } catch (error) {
-      console.error("Error fetching user details:", error);
-    }
-  };
+  // const getUserDetails = async () => {
+  //   try {
+  //     const res = await axios.get("/api/hackiniiitp/myteam");
+  //     // console.log(res.data);
+  //     setUser(res.data.data.teamName);
+  //   } catch (error) {
+  //     console.error("Error fetching user details:", error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getUserDetails();
-  }, []);
+  // useEffect(() => {
+  //   getUserDetails();
+  // }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);

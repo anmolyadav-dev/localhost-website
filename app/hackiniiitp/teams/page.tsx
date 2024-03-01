@@ -13,6 +13,7 @@ const TeamList = () => {
       try {
         const result = await axios.get("/api/hackiniiitp/teams");
         setTeams(result.data.teams);
+        console.log(result.data.teams);
         setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error("Error fetching teams:", error);
