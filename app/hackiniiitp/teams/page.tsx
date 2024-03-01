@@ -11,7 +11,7 @@ const TeamList = () => {
   useEffect(() => {
     const fetchTeams = async () => {
       try {
-        const result = await axios.get("/api/hackiniiitp/teams");
+        const result = await axios.post("/api/hackiniiitp/teams");
         setTeams(result.data.teams);
         console.log(result.data.teams);
         setLoading(false); // Set loading to false after data is fetched
