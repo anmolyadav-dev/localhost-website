@@ -6,31 +6,36 @@ const page = () => {
       </h2>
 
       <p className="font-northwood text-5xl text-white py-5 px-14">
-        Welcome to HackIn IIIT Pune, a dynamic 36-hour Intra College hackathon
+        Welcome to HackIn IIIT Pune, a dynamic{" "}
+        <span className="text-pink">36-hour Intra College hackathon</span>{" "}
         organized by Localhost, the Dev Community of IIIT Pune. Here, innovation
-        flourishes, and boundaries are pushed as participants come together to
-        code, collaborate, and create impactful solutions.
+        flourishes, and boundaries are pushed as participants come together to{" "}
+        <span className="text-pink">code, collaborate, and create</span>{" "}
+        impactful solutions.
       </p>
       <p className="font-northwood text-5xl text-white py-5 px-14">
-        HackIn IIIT Pune welcomes developers of all levels, offering an
-        inclusive environment where novices and experts alike can thrive. With
-        mentorship from industry professionals and peers, participants have the
-        support needed to transform their ideas into reality.
+        <span className="text-pink">HackIn IIIT Pune</span> welcomes developers
+        of all levels, offering an inclusive environment where novices and
+        experts alike can thrive. With mentorship from industry professionals
+        and peers, participants have the support needed to transform their ideas
+        into reality.
       </p>
       <p className="font-northwood text-5xl text-white py-5 px-14">
-        What sets HackIn IIIT Pune apart is its emphasis on teamwork, learning,
-        and growth. As participants tackle challenges spanning AI, blockchain,
-        web development, and more, they not only enhance their technical skills
-        but also build lasting connections within the community.
+        What sets HackIn IIIT Pune apart is its emphasis on{" "}
+        <span className="text-pink">teamwork, learning, and growth</span>. As
+        participants tackle challenges spanning AI, blockchain, web development,
+        and more, they not only enhance their technical skills but also build
+        lasting connections within the community.
       </p>
       <p className="font-northwood text-5xl text-white py-5 px-14">
-        With exciting prizes, swag, and recognition awaiting outstanding
-        projects, HackIn IIIT Pune is the ultimate playground for innovation.
+        With <span className="text-pink">exciting prizes, swag</span>, and
+        recognition awaiting outstanding projects, HackIn IIIT Pune is the
+        ultimate playground for innovation.
       </p>
       <p className="font-northwood text-5xl text-white py-5 px-14">
-        Join us for an unforgettable weekend of coding, collaboration, and fun –
-        and leave with newfound skills, friendships, and memories. See you at
-        HackIn IIIT Pune!
+        <span className="text-pink">Join us</span> for an unforgettable weekend
+        of coding, collaboration, and fun - and leave with newfound skills,
+        friendships, and memories. See you at HackIn IIIT Pune!
       </p>
     </div>
   );

@@ -2,21 +2,33 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ITeam } from "../../api/models/teamModel";
+import SkeletonLoader from "./loading";
 
 const TeamList = () => {
   const [teams, setTeams] = useState<ITeam[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchTeams = async () => {
       try {
         const result = await axios.get("/api/hackiniiitp/teams");
         setTeams(result.data.teams);
+        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error("Error fetching teams:", error);
       }
     };
     fetchTeams();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center p-8">
+        <h1 className="text-white text-3xl font-bold mb-4 pt-20">Teams</h1>
+        <SkeletonLoader />
+      </div>
+    );
+  }
 
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center p-8">
