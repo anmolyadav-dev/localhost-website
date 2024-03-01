@@ -2,10 +2,9 @@ import { connect } from "../../dbConfig/dbConfig";
 
 import { NextRequest, NextResponse } from "next/server";
 import Team, { ITeam } from "../../models/teamModel"; // Assuming you have a Team model
-import { refreshData ,fetchData } from "../../helpers/CacheFunctions";
 
 connect();
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function GET(req: NextRequest) {
   try {
     // Fetch all teams from the database, excluding the password field
     const teams: ITeam[] = await Team.find({},{password:0,_id:0,"teamMembers._id":0,"teamMembers.email":0});

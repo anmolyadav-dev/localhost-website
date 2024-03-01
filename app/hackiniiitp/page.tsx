@@ -27,8 +27,12 @@ const Home: NextPage = () => {
           Hack for the beginning
         </h2>
         <div className="text-3xl md:text-4xl font-NIKOLETA">
-          <h3>36 Hours</h3>
-          <h3>Online Hackathon</h3>
+          <h3>
+            <span className="text-pink">36</span> Hours
+          </h3>
+          <h3>
+            Online <span className="text-pink">Hackathon</span>
+          </h3>
         </div>
         <div className="text-lg md:text-2xl font-technopollas">
           <p>with a</p>
