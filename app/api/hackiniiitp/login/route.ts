@@ -3,6 +3,7 @@ import Team from "../../models/teamModel"; // Assuming you have a Team model
 import { NextRequest, NextResponse } from "next/server";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { cookies } from "next/headers";
 
 connect();
 
@@ -61,7 +62,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
       success: true,
     });
     // Set the token in the response header
-    response.headers.set("Set-Cookie", `token=${token}; HttpOnly`);
+    // response.headers.set("Set-Cookie", `token=${token}; HttpOnly`);
+    cookies().set("token", token);
 
     return response;
   } catch (error: any) {
