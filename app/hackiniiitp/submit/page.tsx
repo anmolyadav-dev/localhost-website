@@ -3,7 +3,7 @@ import Link from "next/link";
 const Page = () => {
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center flex justify-center items-center">
-      <div className="text-center text-white mt-20">
+      <div className="text-center text-white mt-28 lg:mt-20">
         <h2 className="text-lg lg:text-2xl mb-4 font-mono uppercase">
           Submission Guidelines:
         </h2>
