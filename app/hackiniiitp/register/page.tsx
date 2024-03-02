@@ -29,7 +29,7 @@ const TeamRegistrationPage = () => {
         "/api/hackiniiitp/registration",
         values
       );
-
+      
       router.push("/hackiniiitp/login");
     } catch (error) {
       console.error("Error registering team:", error);
