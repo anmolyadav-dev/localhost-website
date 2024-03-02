@@ -1,9 +1,11 @@
+"use client";
 import Link from "next/link";
+import SubmitPortal from "./SubmitPortal";
 
 const Page = () => {
   return (
-    <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center flex justify-center items-center">
-      <div className="text-center text-white mt-28 lg:mt-20">
+    <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center flex flex-col justify-center items-center">
+      <div className="text-center text-white mt-28 lg:mt-28">
         <h2 className="text-lg lg:text-2xl mb-4 font-mono uppercase">
           Submission Guidelines:
         </h2>
@@ -25,10 +27,6 @@ const Page = () => {
             <span className="text-pink">Readme file.</span>
           </li>
           <li>
-            Extra Documentation is optional and can be given via{" "}
-            <span className="text-pink">Google Drive link.</span>
-          </li>
-          <li>
             Registration in{" "}
             <Link
               href="https://quine.sh/?utm_source=aarcher"
@@ -47,6 +45,11 @@ const Page = () => {
               ( Link )
             </Link>
           </li>
+          <li>
+            Extra Documentation is optional and can be given via{" "}
+            <span className="text-pink">Google Drive link </span>and
+          </li>
+          screenshot of Quine Account of all members should be there in the Drive.
         </ul>
         <h2 className="text-lg lg:text-2xl mb-4 font-mono uppercase">
           Presentation Round:
@@ -68,6 +71,7 @@ const Page = () => {
           </p>
         </div>
       </div>
+      <SubmitPortal />
     </div>
   );
 };

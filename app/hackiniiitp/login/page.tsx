@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation"; // Corrected import
 import axios from "axios";
 import toast from "react-hot-toast";
+import { useAppContext } from "@/context";
 
 // Define Yup schema for form validation
 const loginSchema = Yup.object().shape({
@@ -14,14 +15,18 @@ const loginSchema = Yup.object().shape({
 });
 
 const LoginPage = () => {
+  const { teamName, setTeamName } = useAppContext();
   const router = useRouter();
 
   // Handle form submission
   const handleLogin = async (values: any) => {
     try {
       const response = await axios.post("/api/hackiniiitp/login", values);
-      console.log(response);
+      // console.log(response);
+      setTeamName(values.teamName);
       toast.success("Login Successful!");
+      console.log(teamName);
+      localStorage.setItem("teamName", values.teamName);
       router.push("/hackiniiitp");
     } catch (error: any) {
       console.error("Login failed:", error.message);

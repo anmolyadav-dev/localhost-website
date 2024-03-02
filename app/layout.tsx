@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Navbarchoice from "./components/NavbarChoice";
+import { AppWrapper } from "@/context";
 
 export const metadata: Metadata = {
   title: "Localhost",
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbarchoice />
-        <Toaster position="bottom-right" />
-        {children}
+        <AppWrapper>
+          <Navbarchoice />
+          <Toaster position="bottom-right" />
+          {children}
+        </AppWrapper>
       </body>
     </html>
   );

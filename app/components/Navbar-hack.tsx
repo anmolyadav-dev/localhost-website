@@ -6,24 +6,21 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import { useAppContext } from "../../context";
 
 const Navbarhack = () => {
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
+  const { teamName, setTeamName } = useAppContext();
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // const getUserDetails = async () => {
-  //   try {
-  //     const res = await axios.get("/api/hackiniiitp/myteam");
-  //     // console.log(res.data);
-  //     setUser(res.data.data.teamName);
-  //   } catch (error) {
-  //     console.error("Error fetching user details:", error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getUserDetails();
-  // }, []);
+  useEffect(() => {
+    // Retrieve teamName from localStorage if available
+    const storedTeamName = localStorage.getItem("teamName");
+    if (storedTeamName) {
+      setTeamName(storedTeamName);
+    }
+  }, []);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -73,10 +70,10 @@ const Navbarhack = () => {
                   Submit Project
                 </li>
               </Link>
-              {user ? (
+              {teamName ? (
                 <Link href="/hackiniiitp/profile" onClick={closeMobileMenu}>
                   <li className="hover:text-greenblue cursor-pointer capitalize">
-                    {user}
+                    {teamName}
                   </li>
                 </Link>
               ) : (
@@ -120,10 +117,10 @@ const Navbarhack = () => {
               Submit Project
             </li>
           </Link>
-          {user ? (
+          {teamName ? (
             <Link href="/hackiniiitp/profile">
               <li className="hover:text-greenblue cursor-pointer capitalize">
-                {user}
+                {teamName}
               </li>
             </Link>
           ) : (

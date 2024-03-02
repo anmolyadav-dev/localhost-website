@@ -1,3 +1,5 @@
+import { AppWrapper } from "../../context";
+
 export default function HackInIIITPLayout({
   children,
 }: {
