@@ -5,13 +5,14 @@ import { useEffect, useState } from "react";
 
 const Page = () => {
   const params = useParams<{ teamName: string }>();
+  const decodedTeamName = decodeURIComponent(params.teamName);
   const [teamDetails, setTeamDetails] = useState<any>({});
 
   useEffect(() => {
     const fetchTeamDetails = async () => {
       try {
         const response = await axios.post("/api/hackiniiitp/details", {
-          teamName: params.teamName,
+          teamName: decodedTeamName,
         });
 
         setTeamDetails(response.data.teamDetails);
@@ -21,13 +22,13 @@ const Page = () => {
     };
 
     fetchTeamDetails();
-  }, [params.teamName]);
+  }, [decodedTeamName]);
 
   return (
     <div className="bg-bg-star bg-cover min-h-screen py-8 px-4 lg:px-16">
       <div className="max-w-4xl mx-auto mt-28">
         <h1 className="text-white text-3xl font-bold mb-8">
-          Team Details: {params.teamName}
+          Team Details: {decodedTeamName}
         </h1>
 
         {teamDetails && teamDetails.team && teamDetails.project && (
