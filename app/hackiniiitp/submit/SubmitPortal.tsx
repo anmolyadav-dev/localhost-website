@@ -63,7 +63,7 @@ const SubmitPortal = () => {
   };
 
   return (
-    <div className="w-96 mx-auto p-4 bg-white bg-opacity-10 text-white rounded shadow-lg my-6">
+    <div className="w-80 lg:w-96 mx-auto p-4 bg-white bg-opacity-10 text-white rounded shadow-lg my-6">
       <h2 className="text-2xl font-semibold mb-4">Submit Portal</h2>
 
       <Formik
@@ -86,10 +86,7 @@ const SubmitPortal = () => {
               />
             </div>
             <div className="mb-4 text-white">
-              <label
-                htmlFor="description"
-                className="block font-semibold mb-1"
-              >
+              <label htmlFor="description" className="block font-semibold mb-1">
                 Project Description:
               </label>
               <Field

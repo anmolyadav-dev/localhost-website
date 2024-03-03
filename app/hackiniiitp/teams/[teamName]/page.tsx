@@ -46,13 +46,15 @@ const Page = () => {
               <h2 className="text-xl text-white font-semibold mb-2">
                 Project Description
               </h2>
-              <p className="text-gray-300">{teamDetails.project.description}</p>
+              <p className="text-gray-300 ">
+                {teamDetails.project.description}
+              </p>
             </div>
             <div className="mb-6">
               <h2 className="text-xl text-white font-semibold mb-2">
                 GitHub Link
               </h2>
-              <p className="text-gray-300">
+              <p className="text-gray-300 w-full">
                 <a
                   href={teamDetails.project.githubLink}
                   target="_blank"
@@ -66,7 +68,7 @@ const Page = () => {
               <h2 className="text-xl text-white font-semibold mb-2">
                 Drive Link
               </h2>
-              <p className="text-gray-300">
+              <p className="text-gray-300 w-full">
                 <a
                   href={teamDetails.project.driveLink}
                   target="_blank"
