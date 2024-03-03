@@ -65,7 +65,7 @@ const TeamList = () => {
                   <a href={`/hackiniiitp/teams/${team.teamName}`}>
                     {" "}
                     {/* Dynamic project route TO BE ADDED ASAP*/}
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg disabled:bg-blue-700" disabled>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg disabled:bg-blue-700">
                       View Project
                     </button>
                   </a>
