@@ -8,6 +8,7 @@ const eventsData = [
     eventName: "HackIn IIITP",
     eventDate: "2024-03-01",
     eventLocation: "Virtual",
+    EventDescription: "HackIn IIIT Pune, a 36-hour Intra College hackathon",
     imageUrl: "/images/hackathon.jpg",
     websiteUrl: "https://localhost.iiitp.ac.in/hackiniiitp",
     registerUrl: "https://localhost.iiitp.ac.in/hackiniiitp/register",

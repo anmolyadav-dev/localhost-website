@@ -58,11 +58,6 @@ const Navbar = () => {
               </button>
             </div>
             <ul className="flex flex-col gap-4 text-2xl ">
-              <Link href="/hackiniiitp" onClick={closeMobileMenu}>
-                <li className="hover:text-greenblue cursor-pointer">
-                  HackIn IIITP
-                </li>
-              </Link>
               <Link href="/about" onClick={closeMobileMenu}>
                 <li className="hover:text-greenblue cursor-pointer">About</li>
               </Link>
@@ -81,11 +76,18 @@ const Navbar = () => {
                   </li>
                 </Link>
               ) : (
-                <Link href="/login" onClick={closeMobileMenu}>
-                  <li className="hover:text-greenblue cursor-pointer">
-                    Login / Register
-                  </li>
-                </Link>
+                <li className="divide-x-2 flex">
+                  <Link href="/login" onClick={closeMobileMenu}>
+                    <div className="hover:text-greenblue cursor-pointer mr-2">
+                      Login
+                    </div>
+                  </Link>
+                  <Link href="/signup" onClick={closeMobileMenu}>
+                    <div className="hover:text-greenblue cursor-pointer ml-2">
+                      Register
+                    </div>
+                  </Link>
+                </li>
               )}
             </ul>
           </div>
@@ -98,11 +100,6 @@ const Navbar = () => {
           <Image src="/images/logo.png" alt="Logo" width={192} height={32} />
         </Link>
         <ul className="flex gap-10">
-          <Link href="/hackiniiitp">
-            <li className="hover:text-greenblue cursor-pointer">
-              HackIn IIITP
-            </li>
-          </Link>
           <Link href="/about">
             <li className="hover:text-greenblue cursor-pointer">About</li>
           </Link>
@@ -119,11 +116,18 @@ const Navbar = () => {
               </li>
             </Link>
           ) : (
-            <Link href="/login">
-              <li className="hover:text-greenblue cursor-pointer">
-                Login / Register
-              </li>
-            </Link>
+            <li className="divide-x-2 flex">
+              <Link href="/login" onClick={closeMobileMenu}>
+                <div className="hover:text-greenblue cursor-pointer mr-2">
+                  Login
+                </div>
+              </Link>
+              <Link href="/signup" onClick={closeMobileMenu}>
+                <div className="hover:text-greenblue cursor-pointer ml-2">
+                  Register
+                </div>
+              </Link>
+            </li>
           )}
         </ul>
       </header>

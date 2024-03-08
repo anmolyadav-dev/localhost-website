@@ -7,6 +7,7 @@ interface EventCardProps {
   eventName: string;
   eventDate: string;
   eventLocation: string;
+  EventDescription: string;
   imageUrl: string;
   websiteUrl: string;
   registerUrl: string;
@@ -17,6 +18,7 @@ const EventCard = ({
   eventName,
   eventDate,
   eventLocation,
+  EventDescription,
   imageUrl,
   websiteUrl,
   registerUrl,
@@ -38,12 +40,12 @@ const EventCard = ({
       <div className="p-4">
         <h2 className="text-2xl text-white font-semibold mb-2">{eventName}</h2>
 
-        <p className="mb-4 text-white">
+        <p className="mb-2 text-white">
           <span className="mr-2">{eventDate}</span>•
           <span className="ml-2">{eventLocation}</span>
         </p>
 
-        <p className="text-white mb-4">Event description goes here...</p>
+        <p className="text-white mb-4">{EventDescription}</p>
 
         <Link
           href={websiteUrl ? websiteUrl : `/events/${eventId}`}
