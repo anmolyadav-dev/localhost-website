@@ -1,11 +1,12 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { useSession } from "next-auth/react";
 
 // Define the validation schema
 const signupSchema = Yup.object().shape({
@@ -23,22 +24,37 @@ const signupSchema = Yup.object().shape({
 const SignupPage = () => {
   const router = useRouter();
 
+  const { status } = useSession();
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.replace("/");
+    }
+  }, [status, router]);
+
   // Handle signup form submission
   const handleSignup = async (values: any) => {
     try {
       const response = await axios.post("api/users/signup", values);
       console.log(response.data);
 
-      // Redirect to login page after successful signup
-      router.push("/login");
+      router.replace("/login");
       toast.success("Signup Successful!");
-      // setSubmitting(false);
     } catch (error) {
-      // Handle error (e.g., display an error message)
       console.error("Signup error:", error);
-      // setSubmitting(false);
     }
   };
+
+  if (status === "loading") {
+    return (
+      <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
+        <p className="text-3xl lg:text-4xl text-white pt-32 px-10">
+          Loading...
+        </p>
+        ;
+      </div>
+    );
+  }
 
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">

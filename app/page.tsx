@@ -5,11 +5,6 @@ import LandingPage from "./components/LandingPage";
 import Team from "./components/Team";
 
 const Page = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(true);
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
 
   return (
     <div>

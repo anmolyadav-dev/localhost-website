@@ -3,41 +3,32 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { useRecoilState } from "recoil";
+import { userState } from "../atoms/store";
+import { signOut, useSession } from "next-auth/react";
 
 const ProfilePage = () => {
   const router = useRouter();
-  const [user, setUser] = useState(null);
+
+  const { status } = useSession();
+
+  useEffect(() => {
+    if (status === "unauthenticated") {
+      router.replace("/");
+    }
+  }, [status, router]);
+
+  const [user, setUser] = useRecoilState(userState);
   const [updatingDetails, setUpdatingDetails] = useState(false);
 
   // Initialize newUsername and newEmail with the correct types
   const [newUsername, setNewUsername] = useState("");
   const [newEmail, setNewEmail] = useState("");
 
-  const getUserDetails = async () => {
-    try {
-      const response = await axios.get("/api/me");
-      setUser(response.data.data);
-      setNewUsername(response.data.data.username);
-      setNewEmail(response.data.data.email);
-    } catch (error) {
-      console.error("Error fetching user details:", error);
-      // Redirect to login if there is an error or user is not authenticated
-      router.push("/login");
-    }
-  };
-
-  useEffect(() => {
-    // Fetch user details when the component mounts
-    getUserDetails();
-  }, []);
-
   const handleLogout = async () => {
     try {
-      // Perform logout
-      await axios.get("/api/users/logout");
-      router.push("/");
+      signOut();
       toast.success("Logout Successful!");
-      window.location.reload();
     } catch (error: any) {
       console.error("Error during logout:", error.message);
     }
@@ -67,7 +58,6 @@ const ProfilePage = () => {
       // Log the success message
       console.log("Details updated successfully:", response.data.message);
       // Fetch updated user details
-      getUserDetails();
     } catch (error: any) {
       console.error("Error updating details:", error.message);
     } finally {
@@ -78,16 +68,22 @@ const ProfilePage = () => {
     }
   };
 
-  if (!user) {
-    // Show a loading state or redirect to login if the user is not authenticated
-    return null;
+  if (status === "loading") {
+    return (
+      <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
+        <p className="text-3xl lg:text-4xl text-white pt-32 px-10">
+          Loading...
+        </p>
+        ;
+      </div>
+    );
   }
 
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
       <div className="container mx-auto p-8">
         <h2 className="font-minecraft text-5xl lg:text-6xl text-white pt-32 px-10">
-          Welcome, {newUsername}!
+          Welcome, {user}!
         </h2>
 
         <div className="bg-white bg-opacity-10 p-6 rounded-md shadow-md mt-8">
@@ -97,7 +93,6 @@ const ProfilePage = () => {
           <p className="text-gray-300">
             <strong>Email:</strong> {newEmail}
           </p>
-          {/* Add more user details as needed */}
         </div>
 
         {updatingDetails ? (

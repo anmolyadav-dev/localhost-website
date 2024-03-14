@@ -1,28 +1,18 @@
-// Import statements remain the same
 "use client";
-import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
+import { useSession } from "next-auth/react";
+import { useRecoilState } from "recoil";
+import { userState } from "../atoms/store";
 
 const Navbar = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useRecoilState(userState);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const getUserDetails = async () => {
-    try {
-      const res = await axios.get("/api/me");
-      setUser(res.data.data.username);
-    } catch (error) {
-      console.error("Error fetching user details:", error);
-    }
-  };
-
-  useEffect(() => {
-    getUserDetails();
-  }, []);
+  const { status, data: session } = useSession();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -69,10 +59,10 @@ const Navbar = () => {
               <Link href="/events" onClick={closeMobileMenu}>
                 <li className="hover:text-greenblue cursor-pointer">Events</li>
               </Link>
-              {user ? (
+              {status == "authenticated" || user ? (
                 <Link href="/profile" onClick={closeMobileMenu}>
                   <li className="hover:text-greenblue cursor-pointer capitalize">
-                    {user}
+                    {session?.user?.name || user}
                   </li>
                 </Link>
               ) : (
@@ -109,10 +99,10 @@ const Navbar = () => {
           <Link href="/events">
             <li className="hover:text-greenblue cursor-pointer">Events</li>
           </Link>
-          {user ? (
+          {status == "authenticated" || user ? (
             <Link href="/profile">
               <li className="hover:text-greenblue cursor-pointer capitalize">
-                {user}
+                {session?.user?.name || user}
               </li>
             </Link>
           ) : (

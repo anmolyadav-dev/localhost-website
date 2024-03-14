@@ -3,6 +3,8 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Navbarchoice from "./components/NavbarChoice";
 import { AppWrapper } from "@/context";
+import AuthProvider from "./provider/AuthProvider";
+import RecoilContextProvider from "./provider/RecoilContextProvider";
 
 export const metadata: Metadata = {
   title: "Localhost",
@@ -17,11 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AppWrapper>
-          <Navbarchoice />
-          <Toaster position="bottom-right" />
-          {children}
-        </AppWrapper>
+        <AuthProvider>
+          <RecoilContextProvider>
+            <AppWrapper>
+              <Navbarchoice />
+              <Toaster position="bottom-right" />
+              {children}
+            </AppWrapper>
+          </RecoilContextProvider>
+        </AuthProvider>
       </body>
     </html>
   );
