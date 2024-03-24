@@ -11,7 +11,7 @@ const Leaderboard = ({ users }: any) => {
       <h2 className="text-3xl font-bold mb-4 text-center text-white">
         Leaderboard
       </h2>
-      <div className="flex gap-4 items-center justify-center">
+      <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
         {/* Second place */}
         <div className="relative flex items-center justify-center text-white font-medium text-lg border-2 border-gray-500 transition-transform duration-300 hover:filter hover:contrast-110 active:contrast-90 rounded-lg shadow-md bg-gray-500 bg-opacity-20 h-60 w-60 text-center">
           <div className="absolute inset-0 border-2 border-gray-500 rounded-lg animate-clippath"></div>
