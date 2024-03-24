@@ -64,6 +64,11 @@ const Navbarhack = () => {
               <Link href="/hackiniiitp/teams" onClick={closeMobileMenu}>
                 <li className="hover:text-greenblue cursor-pointer">Teams</li>
               </Link>
+              <Link href="/hackiniiitp/leaderboard" onClick={closeMobileMenu}>
+                <li className="hover:text-greenblue cursor-pointer">
+                  LeaderBoard
+                </li>
+              </Link>
               <Link href="/hackiniiitp/submit" onClick={closeMobileMenu}>
                 <li className="hover:text-greenblue cursor-pointer">
                   Submit Project
@@ -110,6 +115,9 @@ const Navbarhack = () => {
           </Link>
           <Link href="/hackiniiitp/teams">
             <li className="hover:text-greenblue cursor-pointer">Teams</li>
+          </Link>
+          <Link href="/hackiniiitp/leaderboard">
+            <li className="hover:text-greenblue cursor-pointer">LeaderBoard</li>
           </Link>
           <Link href="/hackiniiitp/submit">
             <li className="hover:text-greenblue cursor-pointer">
