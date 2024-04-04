@@ -1,28 +1,25 @@
+import { Metadata } from "next";
+
+const metadata: Metadata ={
+  title:"About - Localhost"
+}
+
 const page = () => {
   return (
     <div className="bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
       <h2 className="font-minecraft text-4xl lg:text-6xl text-white pt-32 pb-5 lg:pb-10 px-10">
         <span className="text-greenblue">ABOUT</span> LOCALHOST
       </h2>
-
-      <p className="font-northwood text-5xl text-white py-5 px-14">
-        <span className="text-greenblue">LOCALHOST</span>, a dedicated community
-        of developers at <span className="text-greenblue">IIIT PUNE</span>, is
-        committed to fostering a thriving coding culture within our institution.
-        Our diverse initiatives include web development sprints, enlightening
-        workshops, and active involvement in renowned events such as{" "}
-        <span className="text-greenblue">Hacktoberfest</span> and{" "}
-        <span className="text-greenblue">GSoC</span>.
-      </p>
-      <p className="font-northwood text-5xl text-white py-5 px-14">
-        We provide a collaborative platform for developers to exchange ideas,
-        explore <span className="text-greenblue">innovation</span>, and
-        establish a robust network within our community. Our mission is to
-        empower our members, equipping them to excel in their coding endeavors
-        and emerge as influential{" "}
-        <span className="text-greenblue">contributors</span> in the world of
-        technology.
-      </p>
+      <p className="font-northwood text-white text-5xl px-14">
+        <span className="text-greenblue">LOCALHOST</span> the dynamic Dev Community at IIIT Pune, igniting innovation since 2022! 
+        <p className="py-5">
+        <span className="text-greenblue">Explore</span> coding challenges, hackathons, workshops, and tech talks, fostering creativity and problem-solving skills. 
+        Engage with emerging technologies and industry collaborations, shaping the future of tech. Discover a vibrant space for learning and experimentation. 
+        <p className="py-5">
+        Join us on the journey of <span className="text-greenblue">discovery!</span>
+        </p>
+        </p>
+        </p>
     </div>
   );
 };
