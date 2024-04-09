@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://localhost.iiitp.ac.in/</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/about</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/assignments</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/events</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/login</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/signup</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/assignments/submit/1</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/hackiniiitp</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/hackiniiitp/register</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/hackiniiitp/about</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/hackiniiitp/teams</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/hackiniiitp/leaderboard</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/hackiniiitp/submit</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://localhost.iiitp.ac.in/hackiniiitp/login</loc>
+  <lastmod>2024-04-09T09:13:08+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
