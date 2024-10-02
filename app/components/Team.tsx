@@ -59,24 +59,28 @@ const Team = () => {
                         linkedin="https://www.linkedin.com/in/siddhant-ganesh-senthil-kumar-911060246/"
                     />
                     <TeamCard
+                        name="Anomitra "
+                        github="https://github.com/anomitroid"
+                    />
+                    <TeamCard
                         name="Shivansh Kandpal"
                         linkedin="http://www.linkedin.com/in/shivansh-kandpal-503a2325b/"
+                    />
+                </div>
+                <div className="flex flex-col flex-wrap lg:flex-row justify-center items-center gap-10">
+                    <TeamCard
+                        name="Luv Kansal"
+                        linkedin="https://www.linkedin.com/in/luv-kansal-3a4a372b1/"
+                    />
+
+                    <TeamCard
+                        name="Khushi Garg"
+                        linkedin="http://www.linkedin.com/in/khushi-garg-a7740728b/"
                     />
                     <TeamCard
                         name="Piyush Kulkarni"
                         github="https://github.com/piyushk6626"
                         linkedin="https://www.linkedin.com/in/piyush-kulkarni-ai/"
-                    />
-                </div>
-                <div className="flex flex-col flex-wrap lg:flex-row justify-center items-center gap-10">
-                    <TeamCard name="Anomitra " />
-                    <TeamCard
-                        name="Luv Kansal"
-                        linkedin="https://www.linkedin.com/in/luv-kansal-3a4a372b1/"
-                    />
-                    <TeamCard
-                        name="Khushi Garg"
-                        linkedin="http://www.linkedin.com/in/khushi-garg-a7740728b/"
                     />
                 </div>
             </div>
