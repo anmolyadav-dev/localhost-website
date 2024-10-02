@@ -65,6 +65,7 @@ const Team = () => {
                     <TeamCard
                         name="Shivansh Kandpal"
                         linkedin="http://www.linkedin.com/in/shivansh-kandpal-503a2325b/"
+                        github="https://github.com/zyphon12342"
                     />
                 </div>
                 <div className="flex flex-col flex-wrap lg:flex-row justify-center items-center gap-10">
