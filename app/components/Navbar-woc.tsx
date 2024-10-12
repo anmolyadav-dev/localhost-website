@@ -13,13 +13,13 @@ const Navbarwoc = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    // Retrieve User from localStorage if available
-    const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(storedUser);
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Retrieve User from localStorage if available
+  //   const storedUser = localStorage.getItem("user");
+  //   if (storedUser) {
+  //     setUser(storedUser);
+  //   }
+  // }, [user]);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);

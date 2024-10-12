@@ -9,13 +9,13 @@ import axios from "axios";
 const SubmitPortal = () => {
   const { teamName, setTeamName } = useAppContext();
 
-  useEffect(() => {
-    // Retrieve teamName from localStorage if available
-    const storedTeamName = localStorage.getItem("teamName");
-    if (storedTeamName) {
-      setTeamName(storedTeamName);
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Retrieve teamName from localStorage if available
+  //   const storedTeamName = localStorage.getItem("teamName");
+  //   if (storedTeamName) {
+  //     setTeamName(storedTeamName);
+  //   }
+  // }, []);
 
   // Yup schema for form validation
   const validationSchema = Yup.object().shape({
