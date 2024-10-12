@@ -4,7 +4,7 @@ import { FaSlack } from "react-icons/fa";
 
 const JoinOurCommunity = () => {
   return (
-    <div className="bg-bg-star min-h-screen bg-left lg:bg-center">
+    <div className="relative bg-bg-star min-h-screen bg-left lg:bg-center">
       <h2 className="font-minecraft text-5xl text-white pt-32 pb-10 px-10 text-center">
         JO<span className="text-greenblue">I</span>N O
         <span className="text-greenblue">U</span>R CO
@@ -24,6 +24,12 @@ const JoinOurCommunity = () => {
             SLACK
           </div>
         </Link>
+      </div>
+
+      <div className="absolute bottom-0 mt-4 text-white bg-white w-full bg-opacity-10 rounded-tr-3xl rounded-tl-3xl shadow-lg h-10 text-center flex justify-center items-center">
+        <p className="text-s">
+          © 2024 by <span className="text-greenblue">local</span>host
+        </p>
       </div>
     </div>
   );
