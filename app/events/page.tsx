@@ -1,5 +1,6 @@
 // Import the necessary modules
 import EventCard from "../components/EventCard";
+import { metadata } from "../layout";
 
 // Your events data
 const eventsData = [
@@ -12,6 +13,17 @@ const eventsData = [
     imageUrl: "/images/hackathon.jpg",
     websiteUrl: "https://localhost.iiitp.ac.in/hackiniiitp",
     registerUrl: "https://localhost.iiitp.ac.in/hackiniiitp/register",
+  },
+  {
+    eventId: "2",
+    eventName: "IIITP Winter of Code",
+    eventDate: "2024-12-01",
+    eventLocation: "Virtual",
+    EventDescription:
+      "IIIT Pune Winter of Code is a 2 month long open source event in which we contribute in the Open Source projects",
+    imageUrl: "/images/hackathon.jpg",
+    websiteUrl: "http://localhost:3000/iiitpwoc",
+    registerUrl: "http://localhost:3000/iiitpwoc/register",
   },
 ];
 
