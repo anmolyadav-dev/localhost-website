@@ -8,23 +8,24 @@ function page() {
                 name="Vinit Agarwal"
                 linkedin="agarwalvinit5678/"
                 image="/images/team/2025/vinit-agarwal.jpg"
-                className="h-[420px] w-[250px]"
+                className="h-[420px] w-[250px] scale-110"
             />
+
             <NewTeamCard
                 name="Kanishka Bansode"
                 image="/images/team/2025/kanishka-bansode.jpg"
-                className="h-[420px] w-[250px]"
+                className="h-[420px] w-[250px] scale-110"
             />
             <NewTeamCard
                 name="Ishan Upadhyaya"
                 image="/images/team/2025/ishan-upadhyaya.jpg"
-                className="h-[420px] w-[250px]"
+                className="h-[420px] w-[250px] scale-110"
             />
 
             <NewTeamCard
                 name="Prakhar Singh "
                 image="/images/team/2025/prakhar-singh.jpg"
-                className="h-[420px] w-[250px]"
+                className="h-[420px] w-[250px] scale-110"
             />
         </div>
     );
