@@ -4,7 +4,7 @@ import NewTeamCard from "@/app/components/NewTeamCard";
 
 export default function Card() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 items-center justify-center  h-full pb-7 pt-[130px] px-7 bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 items-center justify-center  h-full pb-10 pt-[130px] px-10 bg-bg-star bg-cover min-h-screen bg-left lg:bg-center">
             <NewTeamCard
                 name="Anmol Yadav"
                 github="anmolyadav-dev"

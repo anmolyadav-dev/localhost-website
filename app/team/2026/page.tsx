@@ -30,7 +30,7 @@ function page() {
                 name="Manas Agarwal"
                 github="manasagar"
                 linkedin="manas-agarwal-a13623256/"
-                image="/images/team/2026/anshul.jpg"
+                image="/images/team/2026/manas.jpg"
                 className="h-[420px] w-[250px]"
             />
             <NewTeamCard
