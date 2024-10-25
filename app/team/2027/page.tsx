@@ -22,6 +22,7 @@ export default function Card() {
             <NewTeamCard
                 name="Shivansh Kandpal"
                 linkedin="shivansh-kandpal-503a2325b"
+                image="/images/team/2027/shivansh.jpeg"
                 github="zyphon12342"
                 className="h-full"
             />
