@@ -42,7 +42,7 @@ function NewTeamCard(props: TeamCardProps) {
     return (
         <>
             <div
-                className={`w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${props.className} `}
+                className={` bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${props.className} `}
             >
                 <div className="align-center">
                     <div className="">
