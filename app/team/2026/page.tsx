@@ -3,7 +3,7 @@ import NewTeamCard from "@/app/components/NewTeamCard";
 
 function page() {
     return (
-        <div className="flex flex-wrap justify-center gap-5 h-full pb-7 pt-[130px] px-7 bg-bg-star bg-cover min-h-screen bg-left lg:bg-center w-full">
+        <div className="flex flex-wrap justify-center gap-16 h-full pb-7 pt-[130px] px-7 bg-bg-star bg-cover min-h-screen bg-left lg:bg-center w-full">
             <NewTeamCard
                 name="Ashmit Jagtap"
                 github="ashmit-coder"
