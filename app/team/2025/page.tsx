@@ -4,8 +4,8 @@ import NewTeamCard from "@/app/components/NewTeamCard";
 function page() {
   return (
     <div className=" pb-7 pt-[130px] px-7 bg-bg-star bg-cover bg-left lg:bg-center w-full text-center">
-      <h1 className="text-4xl text-white font-minecraft">2025 Batch</h1>
-      <div className="flex flex-wrap items-center justify-center gap-16 h-full pb-7  px-7 bg-bg-star bg-cover min-h-screen bg-left lg:bg-center w-full">
+      <h1 className="text-4xl text-white font-minecraft pb-10">2025 Batch</h1>
+      <div className="flex flex-wrap items-center justify-center gap-16 h-full pb-7  px-7 bg-bg-star bg-cover min-h-[90vh] bg-left lg:bg-center w-full">
         <NewTeamCard
           name="Vinit Agarwal"
           linkedin="agarwalvinit5678/"
