@@ -70,7 +70,7 @@
 /* DoctorGlitch Font */
 @font-face {
   font-family: "DoctorGlitch";
-  src: url("/Fonts/DoctorGlitch.otf") format("opentype");
+  src: url("/font/DoctorGlitch.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -78,7 +78,7 @@
 /* Minecraft Font */
 @font-face {
   font-family: "Minecraft";
-  src: url("/Fonts/Minecraft.ttf") format("truetype");
+  src: url("/font/Minecraft.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -86,7 +86,7 @@
 /* NIKOLETA Font */
 @font-face {
   font-family: "NIKOLETA";
-  src: url("/Fonts/NIKOLETA.otf") format("opentype");
+  src: url("/font/NIKOLETA.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -94,7 +94,7 @@
 /* Northwood Font */
 @font-face {
   font-family: "Northwood";
-  src: url("/Fonts/Northwood.ttf") format("truetype");
+  src: url("/font/Northwood.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -102,7 +102,7 @@
 /* Technopollas Font */
 @font-face {
   font-family: "Technopollas";
-  src: url("/Fonts/Technopollas.otf") format("opentype");
+  src: url("/font/Technopollas.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
