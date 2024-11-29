@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Logo](https://localhost-website.vercel.app/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75)
 
-## Getting Started
+Development Club of IIIT Pune
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [1. Prerequisites](#1-Prerequisites)
+- [2. Getting Started](#2-Getting-started)
+- [3. Project Structure](#3-Project-structure)
+- [4. Development Workflow](#4-Development-workflow)
+- [5. How to Contribute](#5-How-to-contribute)
+- [6. Coding Guidelines](#6-Coding-guidelines)
+- [7. Common Issues](#7-Common-issues)
+- [8. Contact](#8-Contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 1-Prerequisites
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Before contributing, ensure you have the following installed:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Node.js (>= 14.x) and npm (or yarn)
+- Git for version control
+- A text editor (e.g., VS Code)
 
-## Learn More
+## 2-Getting-started
 
-To learn more about Next.js, take a look at the following resources:
+Follow these steps to set up the project locally:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Fork and Clone the repository:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-repo
 
-## Deploy on Vercel
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install Dependencies Run the following command to install all required packages:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   npm install
+   # or use yarn
+   yarn install
+   ```
+
+3. **Start the Development Server To start the local development server:**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Access the Website Open your browser and visit:**
+   ```
+   http://localhost:3000
+   ```
+
+## 3-Project-structure
+
+    /public
+      └── font/ (Custom fonts)
+      └── images/ (Static images)
+
+    /app (Next.js pages or routes)
+      ├──  components/ (Reusable components)
+      ├── globals.css/ (Tailwind and global styles)
+      └── api/ (backend code)
+      tailwind.config.ts (Tailwind configuration)
+
+## 4-Development-workflow
+
+1. **Issue** :Create new issue or work on an existing one
+
+2. **Branching**: Create a new branch for your feature or bugfix.
+
+   ```
+   git switch -c add/your-feature-name
+   # check for current working branch
+   git branch
+   # this should so all your branch along with current branch
+
+   ```
+
+3. **Develop**: Make your changes using the project’s coding style.
+
+4. **Commit Changes**: Write clear and concise commit messages.
+
+   ```
+   git add .
+   git commit -m "Add feature: description of the feature"
+
+   ```
+
+5. **Push to Github**
+
+   ```
+   git push origin feature/your-feature-name
+
+   ```
+
+6. Create a Pull Request (PR):
+   ```
+   Go to the repository on GitHub.
+   Click New Pull Request and submit your changes.
+   ```
+
+## 5-How-to-contribute
+
+There are many ways to contribute:
+
+- Bug Fixes: Identify and fix bugs.
+- New Features: Add new features and functionality.
+- Documentation: Improve or add new documentation.
+- UI Enhancements: Enhance UI components.
+
+## 6-Coding-guidelines
+
+- Use Tailwind CSS for styling.
+- Follow the Next.js project structure and best practices.
+- Write clear and reusable components.
+- Follow JavaScript/TypeScript conventions.
+
+  Example:
+
+  ```
+  export default function ExampleComponent() {
+  return (
+      <div className="bg-greenblue p-4 text-white">
+      <h1 className="font-minecraft">Welcome to the Project!</h1>
+      </div>
+  );
+  }
+  ```
+
+## 7-Common-issues
+
+- **Missing Dependencies**: If you see errors related to missing modules, run:
+  ```
+  npm install
+  ```
+- **Port Already in Use**: If port 3000 is in use, change it:
+  ```
+  npm run dev -- -p 3001
+  ```
+
+## 8-Contact
+
+For any questions or support, feel free to reach out:
+
+- Discord: https://discord.gg/8wEquGh4CY
+- GitHub Issues: https://github.com/ShubhamAsati-123/localhost-website/issues
