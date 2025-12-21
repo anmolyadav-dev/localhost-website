@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Navbarchoice from "./components/NavbarChoice";
+import Footer from "./components/Footer";
+import ScrollProgress from "./components/ScrollProgress";
 import { AppWrapper } from "@/context";
 import AuthProvider from "./provider/AuthProvider";
 import RecoilContextProvider from "./provider/RecoilContextProvider";
 import ChakraProvider from "./provider/ChakraProvider";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://localhost.iiitp.ac.in"),
   title: "Localhost, Dev Community of IIIT Pune",
   description:
     "Join the dynamic Dev Community at IIIT Pune, igniting innovation since 2022! Explore coding challenges, hackathons, workshops, and tech talks, fostering creativity and problem-solving skills. Engage with emerging technologies and industry collaborations, shaping the future of tech. Discover a vibrant space for learning and experimentation. Join us on the journey of discovery!",
@@ -37,9 +40,11 @@ export default function RootLayout({
           <RecoilContextProvider>
             <ChakraProvider>
               <AppWrapper>
+                <ScrollProgress />
                 <Navbarchoice />
                 <Toaster position="bottom-right" />
-                {children}
+                <main className="min-h-screen">{children}</main>
+                <Footer />
               </AppWrapper>
             </ChakraProvider>
           </RecoilContextProvider>

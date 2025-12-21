@@ -7,6 +7,7 @@ import { IoMdClose } from "react-icons/io";
 import { useSession } from "next-auth/react";
 import { useRecoilState } from "recoil";
 import { userState } from "../atoms/store";
+import NotificationCenter from "./NotificationCenter";
 
 const Navbar = () => {
   const [user, setUser] = useRecoilState(userState);
@@ -51,13 +52,21 @@ const Navbar = () => {
               <Link href="/about" onClick={closeMobileMenu}>
                 <li className="hover:text-greenblue cursor-pointer">About</li>
               </Link>
+              <Link href="/events" onClick={closeMobileMenu}>
+                <li className="hover:text-greenblue cursor-pointer">Events</li>
+              </Link>
               <Link href="/assignments" onClick={closeMobileMenu}>
                 <li className="hover:text-greenblue cursor-pointer">
                   Assignments
                 </li>
               </Link>
-              <Link href="/events" onClick={closeMobileMenu}>
-                <li className="hover:text-greenblue cursor-pointer">Events</li>
+              <Link href="/members" onClick={closeMobileMenu}>
+                <li className="hover:text-greenblue cursor-pointer">Members</li>
+              </Link>
+              <Link href="/resources" onClick={closeMobileMenu}>
+                <li className="hover:text-greenblue cursor-pointer">
+                  Resources
+                </li>
               </Link>
               {status == "authenticated" || user ? (
                 <Link href="/profile" onClick={closeMobileMenu}>
@@ -89,16 +98,23 @@ const Navbar = () => {
         <Link href="/">
           <Image src="/images/logo.png" alt="Logo" width={192} height={32} />
         </Link>
-        <ul className="flex gap-10">
+        <ul className="flex gap-10 items-center">
           <Link href="/about">
             <li className="hover:text-greenblue cursor-pointer">About</li>
-          </Link>
-          <Link href="/assignments">
-            <li className="hover:text-greenblue cursor-pointer">Assignments</li>
           </Link>
           <Link href="/events">
             <li className="hover:text-greenblue cursor-pointer">Events</li>
           </Link>
+          <Link href="/assignments">
+            <li className="hover:text-greenblue cursor-pointer">Assignments</li>
+          </Link>
+          <Link href="/members">
+            <li className="hover:text-greenblue cursor-pointer">Members</li>
+          </Link>
+          <Link href="/resources">
+            <li className="hover:text-greenblue cursor-pointer">Resources</li>
+          </Link>
+          <NotificationCenter />
           {status == "authenticated" || user ? (
             <Link href="/profile">
               <li className="hover:text-greenblue cursor-pointer capitalize">
